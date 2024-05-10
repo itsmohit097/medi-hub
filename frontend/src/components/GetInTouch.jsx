@@ -42,9 +42,9 @@ function GetInTouch() {
         <h1 className=" my-12 text-2xl md:text-4xl font-bold tracking-tight text-primary text-center ">
           Get In Touch With Us
         </h1>
-        <div className="md:grid grid-cols-2 gap-x-4 hidden">
+        <div className="w-full grid lg:grid-cols-2 gap-x-4 grid-cols-1">
           {/* contact form */}
-          <form onSubmit={handleSubmit} className="w-full md:w-[500px] my-4 space-y-6 md:mx-auto lg:mx-0 lg:w-[400px] xl:w-[600px]">
+          <form onSubmit={handleSubmit} className="w-full my-4 space-y-6 md:mx-auto">
             <div className="  flex flex-col w-full gap-y-4 md:gap-x-4 lg:grid-cols-2">
               <div className="hover:shadow-md flex flex-col gap-1.5 w-full">
                 <label
@@ -129,13 +129,11 @@ function GetInTouch() {
               Send Message
             </button>
           </form>
-          <div className="my-4  ">
-            <img
-              alt="Contact us"
-              className="hidden md:h-[600px] md:w-[500px] xl:w-[600px] xl:h-[700px] md: rounded-lg object-cover lg:block"
-              src="https://images.unsplash.com/photo-1615840287214-7ff58936c4cf?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=687&amp;h=800&amp;q=80"
-            />
-          </div>
+          <img
+            alt="Contact us"
+            className="hidden w-full h-[600px] md: rounded-lg object-cover lg:block"
+            src="https://images.unsplash.com/photo-1615840287214-7ff58936c4cf?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=687&amp;h=800&amp;q=80"
+          />
         </div>
 
       </div>
