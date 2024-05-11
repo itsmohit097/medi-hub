@@ -8,14 +8,10 @@ import { FaTwitter } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className=" w-full  text-center px-2 ">
-
-      <div className="bg-body  border-t border-onhover max-w-7xl mx-auto flex flex-col items-center py-2 sm:px-6 ">
-
-
+    <div className=" w-screen text-center px-2 ">
+      <div className="bg-body w-full   border-t border-onhover  mx-auto flex flex-col justify-center items-center py-2 sm:px-6 ">
         {/* footer top */}
         <div className=" flex flex-col items-center justify-evenly px-4 py-4 sm:px-6 lg:px-8 lg:flex-row w-full gap-y-2">
-
           <h1 className="relative text-lg text-primary/80 font-semibold before:block before:absolute before:bottom-[-4px] before:left-0 before:w-0 before:h-0.5 before:rounded-full before:bg-onhover before:transition-all before:delay-150 before:ease-in-out hover:before:w-full hover:text-primary">
             Quick Links
           </h1>
@@ -72,8 +68,6 @@ function Footer() {
           </div>
         </div>
 
-
-
         {/* footer bottom */}
 
         <div className="w-full flex flex-col  items-center justify-between px-4 lg:px-0 md:flex-row py-4">
@@ -88,10 +82,7 @@ function Footer() {
             </p>
           </div>
         </div>
-
       </div>
-
-
     </div>
   );
 }
