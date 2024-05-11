@@ -8,15 +8,15 @@ import { FaTwitter } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className=" w-full  text-center px-2 ">
+    <div className=" w-full  text-center">
 
-      <div className="bg-body  border-t border-onhover max-w-7xl mx-auto flex flex-col items-center py-2 sm:px-6 ">
+      <div className="bg-body  border-t border-onhover mx-auto flex flex-col items-center py-2 sm:px-6 ">
 
 
         {/* footer top */}
-        <div className=" flex flex-col items-center justify-evenly px-4 py-4 sm:px-6 lg:px-8 lg:flex-row w-full gap-y-2">
+        <div className=" flex flex-col items-center justify-evenly px-4 py-4 lg:py-3 sm:px-6 lg:px-16 w-full gap-y-2">
 
-          <h1 className="relative text-lg text-primary/80 font-semibold before:block before:absolute before:bottom-[-4px] before:left-0 before:w-0 before:h-0.5 before:rounded-full before:bg-onhover before:transition-all before:delay-150 before:ease-in-out hover:before:w-full hover:text-primary">
+          <h1 className="relative text-lg lg:text-xl text-primary/80 font-semibold before:block before:absolute before:bottom-[-4px] before:left-0 before:w-0 before:h-0.5 before:rounded-full before:bg-onhover before:transition-all before:delay-150 before:ease-in-out hover:before:w-full hover:text-primary">
             Quick Links
           </h1>
 
@@ -25,24 +25,24 @@ function Footer() {
             <ul className="flex flex-col justify-between gap-3 items-center text-sm font-semibold text-primary/80 md:flex-row md:gap-8">
               <li>
                 <NavLink
-                  to={"/"}
-                  className="relative cursor-pointer before:block before:absolute before:bottom-[-4px] before:left-0 before:w-0 before:h-0.5 before:rounded-full before:bg-onhover before:transition-all before:delay-150 before:ease-in-out hover:before:w-full hover:text-primary"
+                  to={"/privacypolicy"}
+                  className="lg:text-[1rem] relative cursor-pointer before:block before:absolute before:bottom-[-4px] before:left-0 before:w-0 before:h-0.5 before:rounded-full before:bg-onhover before:transition-all before:delay-150 before:ease-in-out hover:before:w-full hover:text-primary"
                 >
                   Privacy Policy
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  to={"/"}
-                  className="relative cursor-pointer before:block before:absolute before:bottom-[-4px] before:left-0 before:w-0 before:h-0.5 before:rounded-full before:bg-onhover before:transition-all before:delay-150 before:ease-in-out hover:before:w-full hover:text-primary"
+                  to={"/termsandconditions"}
+                  className="lg:text-[1rem] relative cursor-pointer before:block before:absolute before:bottom-[-4px] before:left-0 before:w-0 before:h-0.5 before:rounded-full before:bg-onhover before:transition-all before:delay-150 before:ease-in-out hover:before:w-full hover:text-primary"
                 >
                   Terms & Conditions
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  to={"/"}
-                  className="relative cursor-pointer before:block before:absolute before:bottom-[-4px] before:left-0 before:w-0 before:h-0.5 before:rounded-full before:bg-onhover before:transition-all before:delay-150 before:ease-in-out hover:before:w-full hover:text-primaryr"
+                  to={"/aboutus"}
+                  className="lg:text-[1rem] relative cursor-pointer before:block before:absolute before:bottom-[-4px] before:left-0 before:w-0 before:h-0.5 before:rounded-full before:bg-onhover before:transition-all before:delay-150 before:ease-in-out hover:before:w-full hover:text-primaryr"
                 >
                   About Us
                 </NavLink>
@@ -50,7 +50,7 @@ function Footer() {
               <li>
                 <NavLink
                   to={"/"}
-                  className="relative cursor-pointer before:block before:absolute before:bottom-[-4px] before:left-0 before:w-0 before:h-0.5 before:rounded-full before:bg-onhover before:transition-all before:delay-150 before:ease-in-out hover:before:w-full hover:text-primary"
+                  className="lg:text-[1rem] relative cursor-pointer before:block before:absolute before:bottom-[-4px] before:left-0 before:w-0 before:h-0.5 before:rounded-full before:bg-onhover before:transition-all before:delay-150 before:ease-in-out hover:before:w-full hover:text-primary"
                 >
                   Contact Us
                 </NavLink>
@@ -61,13 +61,19 @@ function Footer() {
           {/* icons */}
           <div className="flex items-center gap-4 ">
             <div className=" border border-border/50 rounded-full px-2 py-2 hover:bg-onhover/10 cursor-pointer">
-              <FaInstagram />
+              <a href=""> {/* Paste link of instagram handle inside "" */}
+                <FaInstagram />
+              </a>
             </div>
             <div className=" border border-border/50 rounded-full px-2 py-2 hover:bg-onhover/10 cursor-pointer">
-              <FaLinkedin />
+              <a href=""> {/* Paste link of linkedin handle inside "" */}
+                <FaLinkedin />
+              </a>
             </div>
             <div className=" border border-border/50 rounded-full px-2 py-2 hover:bg-onhover/10 cursor-pointer">
-              <FaTwitter />
+              <a href=""> {/* Paste link of twitter handle inside "" */}
+                <FaTwitter />
+              </a>
             </div>
           </div>
         </div>
@@ -76,14 +82,14 @@ function Footer() {
 
         {/* footer bottom */}
 
-        <div className="w-full flex flex-col  items-center justify-between px-4 lg:px-0 md:flex-row py-4">
+        <div className="w-full flex flex-col  items-center justify-between px-4 lg:px-0 md:flex-row py-4 lg:py-2">
           {/* title */}
           <div className="title">
-            <h1 className="text-primary font-bold text-2xl">MediHub</h1>
+            <h1 className="text-primary font-bold text-2xl lg:text-3xl">MediHub</h1>
           </div>
 
           <div className=" mt-2 ">
-            <p className="text-sm font-medium text-secondary">
+            <p className="text-sm lg:text-[1rem] font-medium text-secondary">
               © 2023 DevUI. All rights reserved.
             </p>
           </div>
