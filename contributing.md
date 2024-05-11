@@ -7,7 +7,9 @@
 # Follow these steps to contribute
 
 #### 1. Fork this repository
-
+```sh
+Make sure you UNCHECK the copy only main branch while forking the repository
+```
 #### 2. Clone your forked repository
 ```sh
 git clone https://github.com/itsmohit097/medi-hub.git
@@ -33,26 +35,23 @@ git clone https://github.com/itsmohit097/medi-hub.git
 ```shell
    git checkout <branch_name> // (frontend,backend,dashboard,design)
 ``` 
-#### 5. Now create a new branch inside the switched branch
-```shell
-   git checkout -b fix-issue-<ISSUE-NUMBER>
-``` 
 
-#### 6. After you have added your changes, follow the following command chain
+#### 5. After you have added your changes, follow the following command chain
 
-- `git status -s` // Shows the changed files
-- `git add --all`  // Will add all the files to staging area
+- `git status -s or git status` // Shows the changed files
+- `git add --all or git add .`  // Will add all the files to staging area
 - `git commit -m "feat/docs/fix: <EXPLAIN-YOUR_CHANGES>"`
 
 > **Note**: Replace `<EXPLAIN-YOUR_CHANGES>` with the changes you have made. Also, follow the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) for writing commit messages
-- `git push origin fix-issue-<ISSUE-NUMBER>` (branch you have created)
+- `git push origin <branch_name>`
+> **Note**: Replace `<branch_name>` with branch name you had selected before.
 
-#### 7. After this go to your forked GitHub repository and go to `Pull Request` section. Now you might be able to see a pop up saying **Pull Request**. Click on the popup and you will be redirected to pull request page
+#### 6. After this go to your forked GitHub repository and go to `Pull Request` section. Now you might be able to see a pop up saying **Pull Request**. Click on the popup and you will be redirected to pull request page
 
-#### 8. Now fill in the form template of the pull request and give the necessary description.
+#### 7. Now fill in the form template of the pull request and give the necessary description.
 
-#### 9. Click on **Submit**
+#### 8. Click on **Submit**
 
-#### 10. Hurray! You just made your first contribution to this project 🎉
+#### 9. Hurray! You just made your first contribution to this project 🎉
 
-#### 11. **Wait** for your pull request to be reviewed and merged.
+#### 10. **Wait** for your pull request to be reviewed and merged.
