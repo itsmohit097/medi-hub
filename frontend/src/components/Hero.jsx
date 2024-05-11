@@ -22,14 +22,15 @@ function Hero() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1000
+    autoplaySpeed: 700
   };
 
   return (
     <Slider {...settings}>
       {images.map((image, index) => (
-        <div key={index} className={" w-full  bg-black/20  "}>
-          <div className="w-full h-[100vh] relative md:bg-left-top bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${image})` }}>
+        <div key={index} >
+          <div className="w-full h-[90vh] relative md:bg-left-top bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${image})` }}>
+          <div className="w-full h-full bg-black/20">
             <div className="relative max-w-7xl  mx-auto flex flex-col items-center md:items-start justify-between lg:px-6 px-3 py-3 h-full">
               <div className="absolute top-[50%] translate-y-[-50%] lg:left-[5%] flex flex-col items-center w-fit gap-6 ">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold  text-white text-center py-2 px-6 ">
@@ -62,6 +63,7 @@ function Hero() {
                   Book an Appointment <IoIosArrowForward className="ml-2" />
                 </button>
               </div>
+            </div>
             </div>
           </div>
         </div>
