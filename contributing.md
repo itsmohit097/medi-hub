@@ -36,7 +36,7 @@ git clone https://github.com/itsmohit097/medi-hub.git
    git checkout <branch_name> // (frontend,backend,dashboard,design)
 ``` 
 
-#### 5. After you have added your changes, follow the following command chain
+#### 5. After you have added your changes (Also add appropriate comments), follow the following command chain
 
 - `git status -s or git status` // Shows the changed files
 - `git add --all or git add .`  // Will add all the files to staging area
