@@ -1,7 +1,7 @@
 ---
-name: Custom issue template
+name: Mention your issue here
 about: To identify the issues efficiently
-title: "[BUG]"
+title: "[BUG/FEAT/ENHANCEMENT STYLING/ENHANCEMENT FUNCTION]"
 labels: ''
 assignees: ''
 
