@@ -7,6 +7,8 @@ import AppContext from "./Context/Context.jsx";
 
 
 import { Navbar, Footer, Home, Appointment, AllDoctors, AboutUs } from "./import-export/ImportExport.js";
+import TermsAndConditions from "./pages/TermsAndConditions.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 
 function App() {
 
@@ -21,6 +23,8 @@ function App() {
           <Route path="/appointment" element={<Appointment />} />
           <Route path="/alldoctors" element={<AllDoctors />} />
           <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/termsandconditions" element={<TermsAndConditions />} />
+          <Route path="/privacypolicy" element={<PrivacyPolicy />} />
         </Routes>
         <Footer />
         <ToastContainer position="top-center" />
