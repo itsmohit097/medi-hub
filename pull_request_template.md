@@ -15,7 +15,7 @@ After changes:
 (screenshot)
 ```
 ## Checklist
-
+Replace "[ ]" with "[x]" to mark them as completed.
 - [ ] I have forked the repo and pushed the changes according to contribution guidelines.
 - [ ] I have tested these changes locally.
 - [ ] I have tried to maintain the consistency of the code.
