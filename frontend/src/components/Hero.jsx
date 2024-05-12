@@ -12,24 +12,29 @@ function Hero() {
     "/pexels-fr3nks-287227.jpg",
     "/pexels-fr3nks-305564.jpg",
     "/pexels-karolina-grabowska-4021775.jpg",
-    "/pexels-pixabay-40568.jpg"
+    "/pexels-pixabay-40568.jpg",
     // Add more image paths here if needed
   ];
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 700
+    autoplaySpeed: 3000,
+    pauseOnHover: false, //make this true if you want to pause the slide on hover over hero section
   };
 
   return (
-    <Slider {...settings}>
+    <Slider {...settings}
+      arrows={false}
+      nextArrow={null}
+      prevArrow={null}
+    >
       {images.map((image, index) => (
         <div key={index} >
-          <div className="w-full h-[90vh] relative md:bg-left-top bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${image})` }}>
+          <div className="w-full h-[92vh] relative md:bg-left-top bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${image})` }}>
           <div className="w-full h-full bg-black/20">
             <div className="relative max-w-7xl  mx-auto flex flex-col items-center md:items-start justify-between lg:px-6 px-3 py-3 h-full">
               <div className="absolute top-[50%] translate-y-[-50%] lg:left-[5%] flex flex-col items-center w-fit gap-6 ">
