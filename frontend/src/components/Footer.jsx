@@ -90,7 +90,7 @@ function Footer() {
 
           <div className=" mt-2 ">
             <p className="text-sm lg:text-[1rem] font-medium text-secondary">
-              © 2023 DevUI. All rights reserved.
+              © {new Date().getFullYear()} Mohit kumar. All rights reserved.
             </p>
           </div>
         </div>
