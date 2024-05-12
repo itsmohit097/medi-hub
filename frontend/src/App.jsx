@@ -6,9 +6,10 @@ import "react-toastify/dist/ReactToastify.css";
 import AppContext from "./Context/Context.jsx";
 
 
-import { Navbar, Footer, Home, Appointment, AllDoctors, AboutUs } from "./import-export/ImportExport.js";
+import { Navbar, Footer, Home, Appointment, AllDoctors, AboutUs, Login } from "./import-export/ImportExport.js";
 import TermsAndConditions from "./pages/TermsAndConditions.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
+
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/termsandconditions" element={<TermsAndConditions />} />
           <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+          <Route path="/auth/login" element={<Login />} />
         </Routes>
         <Footer />
         <ToastContainer position="top-center" />

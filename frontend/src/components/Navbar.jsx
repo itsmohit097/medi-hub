@@ -85,7 +85,7 @@ function Navbar() {
             </li>
             <li>
               <NavLink
-                to={"/login"}
+                to={"/auth/login"}
                 className={({ isActive }) =>
                   `text-sm font-semibold relative cursor-pointer before:block before:absolute before:bottom-[-4px] before:left-0 before:w-0 before:h-0.5 before:rounded-full before:bg-text before:transition-all before:delay-150 before:ease-in-out hover:before:w-full hover:text-text ${isActive ? "text-text" : "text-text/70"
                   }`

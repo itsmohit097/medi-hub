@@ -8,6 +8,7 @@ import AppointmentLocation from "../components/AppointmentLocation.jsx";
 import Departments from "../components/Departments.jsx";
 
 // Pages
+import Login from "../pages/auth/login.jsx";
 import Home from "../pages/Home.jsx";
 import Appointment from "../pages/Appointment.jsx";
 import AllDoctors from "../pages/AllDoctors.jsx";
@@ -16,4 +17,4 @@ import AboutUs from "../pages/AboutUs.jsx";
 
 import axios from "../axios/axios.jsx";
 
-export { axios, Navbar, Footer, Home, Hero, WhyUs, GetInTouch, Appointment, AppointmentLocation, Departments, AllDoctors, AboutUs };
+export { axios, Navbar, Footer, Home, Hero, WhyUs, GetInTouch, Appointment, AppointmentLocation, Departments, AllDoctors, AboutUs, Login };
