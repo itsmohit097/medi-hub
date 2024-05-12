@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function SideNavbar() {
-    return (
-        <div>SideNavbar</div>
-    )
+  return <div>SideNavbar</div>;
 }
 
-export default SideNavbar
+export default SideNavbar;
