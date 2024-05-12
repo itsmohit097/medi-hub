@@ -27,10 +27,10 @@ Please describe what you expected to happen.
 
 
 ## Screenshots (if applicable)
-```sh
+
 Actual:
 (screenshot)
 
 Expected (highlight the part that requires changes):
 (screenshot)
-```
+
