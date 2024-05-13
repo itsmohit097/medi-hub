@@ -12,8 +12,8 @@ import Home from "../pages/Home.jsx";
 import Appointment from "../pages/Appointment.jsx";
 import AllDoctors from "../pages/AllDoctors.jsx";
 import AboutUs from "../pages/AboutUs.jsx";
-
+import Medicines from "../pages/Medicines.jsx";
 
 import axios from "../axios/axios.jsx";
 
-export { axios, Navbar, Footer, Home, Hero, WhyUs, GetInTouch, Appointment, AppointmentLocation, Departments, AllDoctors, AboutUs };
+export { axios, Navbar, Footer, Home, Hero, WhyUs, GetInTouch, Appointment, AppointmentLocation, Departments, AllDoctors, AboutUs,Medicines };
