@@ -1,38 +1,19 @@
 import { NavLink } from "react-router-dom";
-import { useState, useEffect } from "react";
 
-import logo from "/logo.svg";
+// react icons
 import { FaDiscord } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 
 function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-
-  const handleScroll = () => {
-    const offset = window.scrollY;
-    console.log(offset);
-    if (offset > 200) {
-      setScrolled(false);
-    } else {
-      setScrolled(false);
-    }
-  };
-
-  // sticky navbar on scroll
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <div
-      className={`${scrolled
-        ? "sticky top-0 delay-500 ease animate-[stickyNavbar fill-mode-forwards] " : ""} w-full h-[8vh]  bg-theme `}
+      className={"w-full h-[8vh]  bg-main_theme "}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between lg:px-6  px-3 py-3">
         {/* logo */}
         <div className="flex items-center gap-3">
-          <img src={logo} alt="" className="w-8 " />
           <h1 className="font-medium text-2xl text-text">MediHub</h1>
         </div>
 
