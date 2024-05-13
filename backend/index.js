@@ -1,7 +1,7 @@
 import dbConnection from "./src/db/dbConnection.js";
 import { v2 as cloudinary } from 'cloudinary';
+import Razorpay from "razorpay";
 import app from "./app.js";
-
 
 // cloudinary configuration
 cloudinary.config({
@@ -9,7 +9,11 @@ cloudinary.config({
     api_key: process.env.CLOUDINARY_API_KEY,
     api_secret: process.env.CLOUDINARY_API_SECRET
 });
-
+// rayzerpay configuration
+export const instance = new Razorpay({
+    key_id: process.env.RAZORPAY_API_KEY,
+    key_secret: process.env.RAZORPAY_APT_SECRET,
+  });
 // Database connnection configuration
 dbConnection()
     .then(() => {
