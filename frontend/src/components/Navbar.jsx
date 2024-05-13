@@ -9,9 +9,9 @@ function Navbar() {
 
   return (
     <div
-      className={"w-full h-[8vh]  bg-main_theme "}
+      className={"w-full h-[12vh]  bg-main_theme fixed top-0 z-50 shadow-md"}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between lg:px-6  px-3 py-3">
+      <div className="max-w-7xl mx-auto flex items-center justify-between lg:px-6  px-3 py-5">
         {/* logo */}
         <div className="flex items-center gap-3">
           <h1 className="font-medium text-2xl text-text">MediHub</h1>
