@@ -90,7 +90,7 @@ function Navbar() {
         <div className="flex gap-4 items-center">
           <NavLink
             to={
-              "https://github.com/itsmohit097/mern_stack_hospital_management_system"
+              "https://discord.gg/krQd2Fss"
             }
             target="_blank"
           >
