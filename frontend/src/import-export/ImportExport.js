@@ -18,4 +18,4 @@ import Signup from "../pages/Signup.jsx";
 
 import axios from "../axios/axios.jsx";
 
-export { axios, Navbar, Footer, Home, Hero, WhyUs, Contributors, Appointment, AppointmentLocation, Departments, AllDoctors, AboutUs };
+export { axios, Navbar, Footer, Home, Hero, WhyUs, Contributors, Appointment, AppointmentLocation, Departments, AllDoctors, AboutUs , Login , Signup };
