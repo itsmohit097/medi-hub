@@ -1,12 +1,13 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import AppContext from "./Context/Context.jsx";
 
 
-import { Navbar, Footer, Home, Appointment, AllDoctors, AboutUs } from "./import-export/ImportExport.js";
+import { Navbar, Footer, Home, Appointment, AllDoctors, AboutUs , Login , Signup} from "./import-export/ImportExport.js";
 import TermsAndConditions from "./pages/TermsAndConditions.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 
@@ -25,6 +26,8 @@ function App() {
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/termsandconditions" element={<TermsAndConditions />} />
           <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+          <Route path="login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
         <Footer />
         <ToastContainer position="top-center" />

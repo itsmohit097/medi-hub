@@ -12,6 +12,8 @@ import Home from "../pages/Home.jsx";
 import Appointment from "../pages/Appointment.jsx";
 import AllDoctors from "../pages/AllDoctors.jsx";
 import AboutUs from "../pages/AboutUs.jsx";
+import Login from "../pages/Login.jsx";
+import Signup from "../pages/Signup.jsx";
 
 
 import axios from "../axios/axios.jsx";
