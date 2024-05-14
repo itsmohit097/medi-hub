@@ -18,21 +18,22 @@ function Hero() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 700
+    autoplaySpeed: 2500
   };
 
   return (
-    <Slider {...settings}>
+   
+    <Slider {...settings} className="" >
       {images.map((image, index) => (
         <div key={index} >
           <div className="w-full h-[90vh] relative md:bg-left-top bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${image})` }}>
           <div className="w-full h-full bg-black/20">
             <div className="relative max-w-7xl  mx-auto flex flex-col items-center md:items-start justify-between lg:px-6 px-3 py-3 h-full">
-              <div className="absolute top-[50%] translate-y-[-50%] lg:left-[5%] flex flex-col items-center w-fit gap-6 ">
+              <div className="absolute top-[50%] translate-y-[-50%] lg:left-[5%]  flex flex-col items-center w-fit gap-6  ">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold  text-white text-center py-2 px-6 ">
                   Your Health
                   <br />
@@ -69,6 +70,7 @@ function Hero() {
         </div>
       ))}
     </Slider>
+  
   );
 }
 
