@@ -17,14 +17,12 @@ export default {
         }
       },
       colors: {
-        primary: "#02475b",
-        border: "#285430",
-        onhover: "#29666a",
-        secondary: "#1a4b4e",
-        body: "#f2f2f2",
-        underline: "#00b38e",
-        newColor: "#A76BC3",
-        theme: "#11484e",
+        main_theme: "#03565A",
+        light_theme: "#B3DAD9",
+        pastel_blue: "#E3EFFC",
+        pastel_yellow: "#FDF1DB",
+        pastel_pink: "#FCEDF2",
+        cart_orange: "#FF8945",
         text: "#FFFFFF"
       }
     },
