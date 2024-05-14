@@ -1,10 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+
 // icons
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
+
+
 
 function Footer() {
   return (
@@ -88,11 +91,14 @@ function Footer() {
             <h1 className="text-primary font-bold text-2xl lg:text-3xl">MediHub</h1>
           </div>
 
+          
           <div className=" mt-2 ">
-            <p className="text-sm lg:text-[1rem] font-medium text-secondary">
+            <p className="text-sm lg:text-[1rem] font-medium text-secondary text-center">
               © {new Date().getFullYear()} Mohit kumar. All rights reserved.
             </p>
+  
           </div>
+          
         </div>
 
       </div>
