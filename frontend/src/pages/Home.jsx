@@ -1,12 +1,12 @@
 import React from 'react'
-import { Hero, WhyUs, GetInTouch } from "../import-export/ImportExport";
+import { Contributors, Hero, WhyUs, } from "../import-export/ImportExport";
 
 function Home() {
     return (
         <>
             <Hero />
             <WhyUs />
-            <GetInTouch />
+            <Contributors />
         </>
     )
 }
