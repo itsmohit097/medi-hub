@@ -12,7 +12,6 @@ import AddtoCart from "./pages/AddtoCart.jsx";
 import Categoryitems from "./pages/Categoryitems.jsx";
 import SingalMedicine from "./pages/SingalMedicine.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
-import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import GoToTop from "./components/GoToTop.jsx";
 
 
