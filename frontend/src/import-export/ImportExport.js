@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 import Hero from "../components/Hero.jsx";
 import WhyUs from "../components/WhyUs.jsx";
-import GetInTouch from "../components/GetInTouch.jsx";
+import Contributors from "../components/Contributors.jsx";
 import AppointmentLocation from "../components/AppointmentLocation.jsx";
 import Departments from "../components/Departments.jsx";
 
@@ -16,4 +16,4 @@ import Medicines from "../pages/Medicines.jsx";
 
 import axios from "../axios/axios.jsx";
 
-export { axios, Navbar, Footer, Home, Hero, WhyUs, GetInTouch, Appointment, AppointmentLocation, Departments, AllDoctors, AboutUs,Medicines };
+export { axios, Navbar, Footer, Home, Hero, WhyUs, Contributors, Appointment, AppointmentLocation, Departments, AllDoctors, AboutUs,Medicines };

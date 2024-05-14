@@ -11,7 +11,10 @@ import TermsAndConditions from "./pages/TermsAndConditions.jsx";
 import AddtoCart from "./pages/AddtoCart.jsx";
 import Categoryitems from "./pages/Categoryitems.jsx";
 import SingalMedicine from "./pages/SingalMedicine.jsx";
-// import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
+import GoToTop from "./components/GoToTop.jsx";
+
 
 function App() {
 
@@ -31,8 +34,9 @@ function App() {
           <Route path="/shop-by-category/:id" element={<Categoryitems />} />
           <Route path="/medicine-cart" element={<AddtoCart />} />
           <Route path="/termsandconditions" element={<TermsAndConditions />} />
-          {/* <Route path="/privacypolicy" element={<PrivacyPolicy />} /> */}
+          <Route path="/privacypolicy" element={<PrivacyPolicy />} />
         </Routes>
+        <GoToTop/>
         <Footer />
         <ToastContainer position="top-center" />
       </AppContext>
