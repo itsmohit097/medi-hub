@@ -69,7 +69,7 @@ export const getUserAppointmentInfo = asyncHandler(async (req, res, next) => {
             },
             {
                 $lookup: {
-                    from: "users",
+                    from: "User",
                     localField: "patient",
                     foreignField: "_id",
                     as: "patientDetails"
@@ -80,7 +80,7 @@ export const getUserAppointmentInfo = asyncHandler(async (req, res, next) => {
             },
             {
                 $lookup: {
-                    from: "doctors",
+                    from: "Doctor",
                     localField: "doctor",
                     foreignField: "_id",
                     as: "doctorDetails"
