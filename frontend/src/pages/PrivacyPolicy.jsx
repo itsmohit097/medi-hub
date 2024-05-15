@@ -29,7 +29,6 @@ function PrivacyPolicy() {
             <h2 className="text-xl font-semibold mb-2 text-blue-800">User Rights</h2>
             <p className="text-gray-700"> Inform users about their rights regarding their personal data, including the right to access, update, or delete their information.</p>
         </div>
-        
     </div>
 </div>
   )
