@@ -4,7 +4,9 @@ import { NavLink } from "react-router-dom";
 import { FaDiscord } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleUser } from '@fortawesome/free-regular-svg-icons';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 function Navbar() {
 
   return (
@@ -14,24 +16,16 @@ function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between lg:px-6  px-3 py-3">
         {/* logo */}
         <div className="flex items-center gap-3">
-          <h1 className="font-medium text-2xl text-text">MediHub</h1>
+        <h1 className="font-medium text-2xl text-text"><NavLink
+                to={"/"}
+              >
+                MEDIHUB
+              </NavLink></h1>
         </div>
-
         {/* Nav Menus */}
         <div className="hidden md:block">
           <ul className="flex justify-between gap-8 items-center">
-            <li>
-              <NavLink
-                to={"/"}
-                className={({ isActive }) =>
-                  `text-sm font-semibold relative cursor-pointer before:block before:absolute before:bottom-[-4px] before:left-0 before:w-0 before:h-0.5 before:rounded-full before:bg-text before:transition-all before:delay-150 before:ease-in-out hover:before:w-full hover:text-text ${isActive ? "text-text" : "text-text/70"
-                  }`
-                }
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
+          <li>
               <NavLink
                 to={"/alldoctors"}
                 className={({ isActive }) =>
@@ -39,7 +33,18 @@ function Navbar() {
                   }`
                 }
               >
-                All Doctors
+                Doctors
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to={"/medicines"}
+                className={({ isActive }) =>
+                  `text-sm font-semibold relative cursor-pointer before:block before:absolute before:bottom-[-4px] before:left-0 before:w-0 before:h-0.5 before:rounded-full before:bg-text before:transition-all before:delay-150 before:ease-in-out hover:before:w-full hover:text-text ${isActive ? "text-text" : "text-text/70"
+                  }`
+                }
+              >
+                Medicines
               </NavLink>
             </li>
             <li>
@@ -50,21 +55,10 @@ function Navbar() {
                   }`
                 }
               >
-                Appointment
+                Appointments
               </NavLink>
             </li>
-            <li>
-              <NavLink
-                to={"/aboutus"}
-                className={({ isActive }) =>
-                  `text-sm font-semibold relative cursor-pointer before:block before:absolute before:bottom-[-4px] before:left-0 before:w-0 before:h-0.5 before:rounded-full before:bg-text before:transition-all before:delay-150 before:ease-in-out hover:before:w-full hover:text-text ${isActive ? "text-text" : "text-text/70"
-                  }`
-                }
-              >
-                About Us
-              </NavLink>
-            </li>
-            <li>
+            <li className="border border-gray-300 rounded-md p-1">
               <NavLink
                 to={"/login"}
                 className={({ isActive }) =>
@@ -72,17 +66,10 @@ function Navbar() {
                   }`
                 }
               >
-                Login
+                <FontAwesomeIcon icon={faCircleUser} size="lg" className="icon-spacing"/>Login
               </NavLink>
             </li>
-            <li className="hover:scale-105">
-              <NavLink
-                to={"/signup"}
-                className="text-sm text-theme bg-text font-semibold relative cursor-pointer border rounded-3xl px-5 py-2 "
-              >
-                Sign Up
-              </NavLink>
-            </li>
+            
           </ul>
         </div>
 
