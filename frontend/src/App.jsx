@@ -1,22 +1,27 @@
-import React from "react";
-import { useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Swal from 'sweetalert2'
-
+import Swal from "sweetalert2";
 
 import AppContext from "./Context/Context.jsx";
 
-
-import { Navbar, Footer, Home, Appointment, AllDoctors, AboutUs , Login , Signup} from "./import-export/ImportExport.js";
-import TermsAndConditions from "./pages/TermsAndConditions.jsx";
-import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import GoToTop from "./components/GoToTop.jsx";
+import {
+  AboutUs,
+  AllDoctors,
+  Appointment,
+  Footer,
+  Home,
+  Login,
+  Navbar,
+  Signup,
+} from "./import-export/ImportExport.js";
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
+import TermsAndConditions from "./pages/TermsAndConditions.jsx";
 
 function App() {
-
   useEffect(() => {
     Swal.fire({
       title: "<strong>Discord Alert !</strong>",
@@ -30,7 +35,6 @@ function App() {
       `,
     });
   });
-
 
   return (
     <BrowserRouter>
@@ -46,7 +50,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
         </Routes>
-        <GoToTop/>
+        <GoToTop />
         <Footer />
         <ToastContainer position="top-center" />
       </AppContext>

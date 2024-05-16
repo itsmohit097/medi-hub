@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function AppointmentLocation() {
-  return (
-    <div>AppointmentLocation</div>
-  )
+  return <div>AppointmentLocation</div>;
 }
 
-export default AppointmentLocation
+export default AppointmentLocation;
