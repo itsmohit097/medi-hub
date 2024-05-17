@@ -28,6 +28,7 @@ git clone https://github.com/itsmohit097/medi-hub.git
 #### 4. Start the development environment:
 
 ```
+cd backend
 cp .env.example .env
 ```
 This command creates a new .env file from the .env.example file. You will fill in the values in the newly created .env file.
