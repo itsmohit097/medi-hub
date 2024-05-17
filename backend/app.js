@@ -29,13 +29,11 @@ app.use(express.urlencoded({ extended: true }));
 import userRouter from "./src/routes/user.routes.js";
 import contactUsRouter from "./src/routes/contactus.routes.js";
 import appointmentRouter from "./src/routes/appointment.routes.js";
-import getInTouchRouter from "./src/routes/getInTouch.routes.js";
 
 // routes declaration
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/message", contactUsRouter);
 app.use("/api/v1/appointment", appointmentRouter);
-app.use("/api/v1/getInTouch", getInTouchRouter);
 
 // error middleware
 app.use(errorHandler);
