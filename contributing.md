@@ -27,16 +27,24 @@ git clone https://github.com/itsmohit097/medi-hub.git
 ``` 
 #### 4. Start the development environment:
 
+```
+cd backend
+cp .env.example .env
+```
+This command creates a new .env file from the .env.example file. You will fill in the values in the newly created .env file.
+
+#### 5. Start the development environment:
+
    ```shell
    npm run dev // for all
    now open the local host
    ```
-#### 4. Switch to the branch you want to contribute to:
+#### 6. Switch to the branch you want to contribute to:
 ```shell
    git checkout <branch_name> // (frontend,backend,dashboard,design)
 ``` 
 
-#### 5. After you have added your changes (Also add appropriate comments), follow the following command chain
+#### 7. After you have added your changes (Also add appropriate comments), follow the following command chain
 
 - `git status -s or git status` // Shows the changed files
 - `git add --all or git add .`  // Will add all the files to staging area
@@ -46,12 +54,12 @@ git clone https://github.com/itsmohit097/medi-hub.git
 - `git push origin <branch_name>`
 > **Note**: Replace `<branch_name>` with branch name you had selected before.
 
-#### 6. After this go to your forked GitHub repository and go to `Pull Request` section. Now you might be able to see a pop up saying **Pull Request**. Click on the popup and you will be redirected to pull request page
+#### 8. After this go to your forked GitHub repository and go to `Pull Request` section. Now you might be able to see a pop up saying **Pull Request**. Click on the popup and you will be redirected to pull request page
 
-#### 7. Now fill in the form template of the pull request and give the necessary description.
+#### 9. Now fill in the form template of the pull request and give the necessary description.
 
-#### 8. Click on **Submit**
+#### 10. Click on **Submit**
 
-#### 9. Hurray! You just made your first contribution to this project 🎉
+#### 11. Hurray! You just made your first contribution to this project 🎉
 
-#### 10. **Wait** for your pull request to be reviewed and merged.
+#### 12. **Wait** for your pull request to be reviewed and merged.
