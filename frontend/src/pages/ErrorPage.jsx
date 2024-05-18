@@ -2,7 +2,7 @@ import pageNotFoundImage from "../../public/404PageError.png";
 
 export default function ErrorPage(){
     return(
-        <div className="flex flex-col items-center mt-16 mb-8 pt-8 pb-8">
+        <div className="flex w-full  h-92vh flex-col h-92vh items-center mt-16 mb-8 pt-8 pb-8">
 
            <img src={pageNotFoundImage} alt="404 Error" style={{width:'300px',height:'auto'}}></img>
 
