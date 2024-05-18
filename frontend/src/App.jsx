@@ -10,7 +10,7 @@ import Swal from 'sweetalert2'
 import AppContext from "./Context/Context.jsx";
 
 
-import { Navbar, Footer, Home, Appointment, AllDoctors, AboutUs , Login , Signup} from "./import-export/ImportExport.js";
+import { Navbar, Footer, Home, Appointment, AllDoctors, AboutUs , Login , Signup , ErrorPage} from "./import-export/ImportExport.js";
 import TermsAndConditions from "./pages/TermsAndConditions.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import GoToTop from "./components/GoToTop.jsx";
@@ -45,6 +45,7 @@ function App() {
           <Route path="/privacypolicy" element={<PrivacyPolicy />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/*" element={<ErrorPage />} />
         </Routes>
         <GoToTop/>
         <Footer />
