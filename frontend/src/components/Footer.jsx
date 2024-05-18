@@ -1,5 +1,5 @@
 import React from "react";
-import axios from "axios";
+import { axios } from "../import-export/ImportExport";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 // icons
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 function Footer() {
   const navLinks = [
@@ -84,7 +84,7 @@ function Footer() {
               </div>
               <div className=" border border-white/70 rounded-full px-2 py-2 hover:hover:bg-slate-700/30 cursor-pointer">
                 <a href="https://www.linkedin.com/in/itsmohit097/" target="_blank">
-                  <FaTwitter />
+                <FaXTwitter />
                 </a>
               </div>
             </div>
