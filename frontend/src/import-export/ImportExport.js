@@ -14,8 +14,9 @@ import AllDoctors from "../pages/AllDoctors.jsx";
 import AboutUs from "../pages/AboutUs.jsx";
 import Login from "../pages/Login.jsx";
 import Signup from "../pages/Signup.jsx";
+import ErrorPage from "../pages/ErrorPage.jsx";
 
 
 import axios from "../axios/axios.jsx";
 
-export { axios, Navbar, Footer, Home, Hero, WhyUs, Contributors, Appointment, AppointmentLocation, Departments, AllDoctors, AboutUs , Login , Signup };
+export { axios, Navbar, Footer, Home, Hero, WhyUs, Contributors, Appointment, AppointmentLocation, Departments, AllDoctors, AboutUs , Login , Signup , ErrorPage};
