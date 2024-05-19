@@ -1,6 +1,6 @@
 import express from 'express';
 import {
-    AddNewMedicine,
+    addNewMedicine,
     updateMedicine,
     deleteMedicine,
     getHighDiscountMedicines,
@@ -8,19 +8,24 @@ import {
     getSingleMedicine,
     searchMedicine
 } from '../controllers/medicine.controller.js';
+import { isAdminAuthenticated } from "../middlewares/auth.middleware.js";
+import { upload } from "../middlewares/multer.middleware.js";
+
+
+
 const router = express.Router();
 
 // routes of admin
-router.route("test").get((req, res) => {
-    res.send("Medicine routes working");
-});
-router.route("/add-medicine").post(AddNewMedicine);
-router.route("/update-medicine/:id").put(updateMedicine);
-router.route("/delete-medicine/:id").delete(deleteMedicine);
-router.route("/search-medicine").get(searchMedicine);
+router.post("/addmedicine", isAdminAuthenticated, upload.single("image"), addNewMedicine);
+router.delete("/delete-medicine/:id", isAdminAuthenticated, deleteMedicine);
+router.put("/update-medicine/:id", isAdminAuthenticated, updateMedicine);
+
 // routes of user
-router.route("/get/:id").get(getSingleMedicine);
-router.route("/shope-by-category/:category").get(getCategoryMedicines);
-router.route("/discount").get(getHighDiscountMedicines)
+router.get("/get/:id", getSingleMedicine);
+router.get("/shop-by-category/:category", getCategoryMedicines);
+router.get("/discount", getHighDiscountMedicines)
+
+router.get("/search-medicine", searchMedicine);
+
 
 export default router;

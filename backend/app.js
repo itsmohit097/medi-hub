@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: true }));
 import userRouter from "./src/routes/user.routes.js";
 import contactUsRouter from "./src/routes/contactus.routes.js";
 import appointmentRouter from "./src/routes/appointment.routes.js";
-import buymeidcineRouter from "./src/routes/medicine.routes.js";
+import medicineRouter from "./src/routes/medicine.routes.js";
 import CartRouter from "./src/routes/UserCart.routes.js"
 import PaymentRouter from "./src/routes/payment.routes.js"
 
@@ -37,9 +37,9 @@ import PaymentRouter from "./src/routes/payment.routes.js"
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/message", contactUsRouter);
 app.use("/api/v1/appointment", appointmentRouter);
-app.use("/api/v1/BuyMedicines", buymeidcineRouter);
-app.use("/api/v1/medicines-cart",CartRouter)
-app.use("/api/v1/payment",PaymentRouter)
+app.use("/api/v1/medicines", medicineRouter);
+app.use("/api/v1/medicines-cart", CartRouter)
+app.use("/api/v1/payment", PaymentRouter)
 
 
 // error middleware

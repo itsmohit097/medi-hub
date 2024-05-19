@@ -1,14 +1,15 @@
 import express from 'express';
-import{
-    AddToCart,
+import {
+    addToCart,
     deleteFromCart,
     getUserCart,
-} from '../controllers/UserCart.controller.js';
+} from '../controllers/userCart.controller.js';
+import { isPatientAuthenticated } from "../middlewares/auth.middleware.js";
 
 const router = express.Router();
 
-router.route("/add-to-cart").post(AddToCart);
-router.route("/delete-from-cart/:id").delete(deleteFromCart);
-router.route("/user-cart/:userId").get(getUserCart);
+router.post("/add-to-cart", addToCart);
+router.delete("/delete-from-cart/:id", deleteFromCart);
+router.get("/user-cart/:userId", isPatientAuthenticated, getUserCart);
 
 export default router

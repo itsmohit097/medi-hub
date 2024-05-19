@@ -1,4 +1,4 @@
-import mongoose ,{Schema, model }from "mongoose";
+import mongoose, { Schema, model } from "mongoose";
 
 const medicineSchema = new Schema({
     name: {
@@ -18,16 +18,11 @@ const medicineSchema = new Schema({
     category: {
         type: String,
         required: [true, "Category is required"],
-        enum: ["Tablet","Syrup", "Injection", "Drops","Cream", "Powder", "Lotion", "Inhaler"],
+        enum: ["Tablet", "Syrup", "Injection", "Drops", "Cream", "Powder", "Lotion", "Inhaler"],
     },
     manufacturer: {
         type: String,
         required: [true, "Manufacturer is required"],
-    },
-    prescriptionRequired: {
-        type: Boolean,
-        required: [true, "Prescription is required"],
-        default: true,
     },
     expiryDate: {
         type: Date,
@@ -38,7 +33,7 @@ const medicineSchema = new Schema({
         required: [true, "Stock is required"],
     },
     image: {
-        type: String,
+        type: String, // cloudinary url
         required: [true, "Image is required"],
     },
     discount: {
