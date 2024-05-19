@@ -3,7 +3,7 @@ import {
     addToCart,
     deleteFromCart,
     getUserCart,
-} from '../controllers/userCart.controller.js';
+} from '../controllers/UserCart.controller.js';
 import { isPatientAuthenticated } from "../middlewares/auth.middleware.js";
 
 const router = express.Router();
