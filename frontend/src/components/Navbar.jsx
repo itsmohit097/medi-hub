@@ -7,7 +7,7 @@ function Navbar() {
 
   return (
     <div
-      className={"w-full h-[8vh]  bg-main_theme fixed top-0 z-50 shadow-md"}
+      className={"w-full h-[8vh]  bg-main_theme fixed top-0 z-50 shadow-md relative"}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between lg:px-6  px-3 py-1">
         {/* logo */}
