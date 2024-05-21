@@ -1,0 +1,22 @@
+name: Greetings
+on: [pull_request_target, issues]
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: |
+          Hi there!
+          
+          Thanks for opening this issue. We appreciate your contribution to this open-source project. We aim to respond or assign your issue as soon as possible.
+          
+          Please note that this is the project owner, @itsmohit097 Do the fork and branch process properly (read contribution.md file). if no followed properly PR will not be merged. Thank you for your cooperation. 
+        pr-message: |
+          Welcome to our repository. 🎊
+          
+          Thank you so much for taking the time to point this out and for your contribution. @itsmohit097 will check this PR as soon as possible. Thank you for your cooperation.
