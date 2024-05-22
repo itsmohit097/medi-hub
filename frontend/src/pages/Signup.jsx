@@ -30,6 +30,7 @@ function Signup() {
       return;
     }
     // Continue with signup logic if passwords match
+    console.log("form data", formData);
     toast.success('Form submitted successfully!'); 
   };
 
