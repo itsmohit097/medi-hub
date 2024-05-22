@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import backgroundImage from "/istockphoto-1073154998-612x612.jpg"; // Import your background image
 import { toast } from 'react-toastify'; // Import toast from react-toastify
-
+import showEye from "../../public/showEye.svg";
+import hideEye from "../../public/hideEye.svg";
 function Login() {
+  const [password, setPassword] = useState(false);
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -50,15 +52,27 @@ function Login() {
               className='border border-black rounded-md m-2 p-2'
             />
             <label htmlFor='password'>Password:</label>
+            <div className='relative'>
             <input
-              type='password'
+              type={password ? "text" : "password"}
               name='password'
               placeholder='Password'
               value={formData.password}
               onChange={handleInputChange}
               id='password'
-              className='border border-black rounded-md m-2 p-2'
+              className='border border-black rounded-md m-2 p-2 w-[98%]'
             />
+            <img
+              className="absolute w-[30px] top-3 right-5"
+              title={
+                  password ? "Hide password" : "Show password"
+              }
+              src={password ? hideEye : showEye}
+              onClick={() =>
+                  setPassword((prevState) => !prevState)
+              }
+          />
+      </div>
             <button className='bg-main_theme text-white font-bold py-2 px-4 rounded-md mt-4'>
               Login to MediHub
             </button>
