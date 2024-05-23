@@ -1,4 +1,7 @@
 import { NavLink } from "react-router-dom";
+import React from 'react';
+import MEDIHUB from '../../public/Medihub-logo.png';
+
 
 // react icons
 import { FaShoppingCart, FaDiscord, FaGithub, FaLinkedinIn, FaHospitalUser } from "react-icons/fa";
@@ -7,12 +10,13 @@ function Navbar() {
 
   return (
     <div
-      className={"w-full h-[8vh]  bg-main_theme fixed top-0 z-50 shadow-md relative"}
+      className={"w-full h-[13vh]  bg-main_theme fixed top-0 z-50 shadow-md relative"}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between lg:px-6  px-3 py-1">
         {/* logo */}
         <div className="flex items-center gap-3">
-          <h1 className="font-medium text-3xl text-text">MEDIHUB</h1>
+          <img src={MEDIHUB} alt="MEDIHUB" className="h-16 w-auto" />
+          <h1 className="font-medium text-2xl text-text">MEDIHUB</h1>
         </div>
 
         {/* Nav Menus */}
