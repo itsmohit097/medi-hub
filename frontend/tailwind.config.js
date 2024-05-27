@@ -17,13 +17,15 @@ export default {
         }
       },
       colors: {
+        dark_theme: "#113C49",
         main_theme: "#03565A",
         light_theme: "#B3DAD9",
         pastel_blue: "#E3EFFC",
         pastel_yellow: "#FDF1DB",
         pastel_pink: "#FCEDF2",
         cart_orange: "#FF8945",
-        text: "#FFFFFF"
+        text: "#ffffff",
+        text_grey: "#464646"
       }
     },
   },
