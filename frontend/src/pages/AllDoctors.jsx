@@ -59,7 +59,7 @@ function AllDoctors() {
       ];
       return (
         <>
-          <Navbar /> 
+          {/* <Navbar />  */}
           <div className="all-doctors-container">
             <div className="doctor-cards">
               {doctorsData.map((doctor) => (
