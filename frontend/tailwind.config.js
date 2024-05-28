@@ -26,7 +26,10 @@ export default {
         cart_orange: "#FF8945",
         text: "#ffffff",
         text_grey: "#464646"
-      }
+      },
+      // height:{
+      //   heroHeihgt:"calc"
+      // }
     },
   },
   plugins: [],
