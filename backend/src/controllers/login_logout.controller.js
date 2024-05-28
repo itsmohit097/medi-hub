@@ -3,12 +3,25 @@ import { ApiError } from "../utilis/ApiError.js";
 import { User } from "../models/user.model.js";
 import { Doctor } from "../models/doctor.model.js"
 import { generateToken } from "../utilis/jwtToken.js";
+import axios from "axios";
 
 
 //! Login the user
 export const login = asyncHandler(async (req, res, next) => {
     // taking the info from the user
-    const { email, password, confirmPassword, role } = req.body;
+    const { email, password, confirmPassword, role, recaptchaToken } = req.body;
+
+    // Verify the reCAPTCHA token
+    const response = await axios.post('https://www.google.com/recaptcha/api/siteverify', null, {
+        params: {
+            secret: '6LdzteopAAAAAHwBYUTrGjupn-LuF8ox6Uc7n1Uy',
+            response: recaptchaToken
+        }
+    });
+
+    if (!response.data.success) {
+        throw new ApiError(400, "reCAPTCHA verification failed");
+    }
 
     // checking the info provided by the user
     if (!email || !password || !confirmPassword || !role) {
