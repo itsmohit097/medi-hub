@@ -50,7 +50,7 @@ export const getUserDetails = asyncHandler(async (req, res, next) => {
 });
 
 //! Getting details for the doctro
-export const getdoctorDetails = asyncHandler(async (req, res, next) => {
+export const getDoctorDetails = asyncHandler(async (req, res, next) => {
     const user = req.doctor;
 
     res
