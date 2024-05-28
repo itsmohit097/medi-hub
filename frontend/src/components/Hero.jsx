@@ -1,117 +1,91 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
-import { IoIosArrowForward } from "react-icons/io";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import NewHero from "/new_hero.png";
+import { NavLink } from "react-router-dom";
+import heroImg from "/hero.png";
+import tick from "/tick.png";
+import hero from "/new_hero.png";
+
 function Hero() {
-  // // Settings for the carousel
-  // const images = [
-  //   "/heroone.jpg",
-  //   "/anton-8q-U8X1zkvI-unsplash.jpg",
-  //   "/pexels-fr3nks-287227.jpg",
-  //   "/pexels-fr3nks-305564.jpg",
-  //   "/pexels-karolina-grabowska-4021775.jpg",
-  //   "/pexels-pixabay-40568.jpg"
-  //   // Add more image paths here if needed
-  // ];
-  // const settings = {
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  //   autoplaySpeed: 700
-  // };
-
   return (
-    // <Slider {...settings}>
-    //   {images.map((image, index) => (
-    //     <div key={index} >
-    <div className="bg-light_theme w-full h-[100vh] relative md:bg-left-top bg-cover bg-no-repeat bg-center">
-      <div className="w-full h-full bg-black/20 ">
-        <div className="relative max-w-7xl  mx-auto flex flex-col items-center md:items-start justify-between lg:px-6 px-3 py-3 h-[calc(100%_-_8vh)]">
-          <div className="absolute top-[50%] translate-y-[-50%] lg:left-[5%] flex flex-col w-fit gap-6 ">
-            <h1 className="font-medium text-3xl md:text-4xl lg:text-5xl  text-black py-2 px-6 ">
-              HELLO THERE!
-              <br />
-              <span className="text-2xl lg:text-4xl md:text-4xl font-medium">
-                Always caring about
-              </span>
-              <br />
-              <span className="text-2xl lg:text-4xl md:text-4xl font-medium">
-                {" "}
-                your health, we are here to
-              </span>
-              <br />
-              <span className="text-2xl lg:text-4xl md:text-4xl font-medium">
-                {" "}
-                help you.
-              </span>
-            </h1>
+    <div className={`bg-light_theme w-full h-lvh relative `}>
+      <section className="relative max-w-7xl mx-auto flex flex-col items-center md:items-start justify-center md:justify-between h-full lg:px-6  px-3 py-1">
+        {/* text container */}
+        <section className="md:absolute md:top-[50%] md:translate-y-[-50%] md:left-[50%] md:translate-x-[-50%] lg:left-0 lg:translate-x-0 flex flex-col max-w-lg gap-y-6">
+          {/* heading */}
+          <h1 className="font-semibold text-3xl md:text-4xl lg:text-5xl  text-main_theme tracking-tight">
+            <span className="text-dark_theme mr-2">Always</span>
+            <span>caring about your health</span>
+          </h1>
 
-            {/* above medium scrren size button */}
-            <button className="rounded-md ml-6 md:flex w-fit items-center px-8 py-4 text-md font-md shadow-sm hover:shadow-lg bg-main_theme hover:bg-onhover text-text gap-4 ">
-              <img
-                src="https://images.apollo247.in/images/ic-doctor.svg"
-                alt="icon"
-                className="hidden lg:block md:block size-8 "
-              />
-              Book Your Appointment Now
-              {/* <IoIosArrowForward className="" /> */}
-            </button>
-            <button className="rounded-md ml-6 md:flex w-fit items-center px-8 py-4 text-md font-md shadow-sm hover:shadow-lg bg-main_theme hover:bg-onhover text-text gap-4">
-              <img
-                src="https://www.svgrepo.com/download/88732/medicines.svg"
-                alt="icon"
-                className="hidden lg:block md:block size-8 "
-              />
-              Buy Medicines and Essentials
-            </button>
-            {/* small screen size button
-                  <button className="md:hidden flex w-fit items-center rounded-full px-4 py-4 text-xs font-semibold  shadow-sm hover:shadow-md bg-theme text-text ">
-                    <img
-                      src="https://images.apollo247.in/images/ic-doctor.svg"
-                      alt="icon"
-                      className="hidden mr-2 md:mr-4 size-8"
-                    />
-                    Book an Appointment <IoIosArrowForward className="ml-2" />
-                  </button> */}
-          </div>
-          <img
-            src={NewHero}
-            alt="Your Image"
-            className="hidden md:block absolute top-[50%] right-0 transform -translate-y-1/2 w-1/2 h-auto"
-          />
-          <div className="lg:block hidden absolute top-24 right-96 bg-white border border-gray-300 rounded-lg shadow-lg shadow-lg-right shadow-lg-bottom py-4 px-2 mr-10">
-            <p className="font-semibold">
-              <span>Stay hydrated, </span>
-              <br />
-              <span>Stay healthy</span>
-            </p>
-          </div>
-          <div className="lg:block hidden absolute top-44 right-12 bg-white border border-gray-300 rounded-lg shadow-lg shadow-lg-right shadow-lg-bottom px-2 py-4 mt-4 ml-4">
-            <p className="font-semibold">
-              <span>Healthy diet,</span>
-              <br />
-              <span>Healthy life</span>
-            </p>
+          {/* para */}
+          <p className="text-text_grey mb-6">
+            MediHub is a platform where you can meet all doctors and buy
+            essentials in one place.
+          </p>
+
+          {/* ctas */}
+          <NavLink
+            to={"/alldoctors"}
+            className="rounded flex w-fit items-center px-3 md:px-4 py-3 md:py-4 text-md text-md shadow-md hover:shadow-lg bg-main_theme hover:bg-dark_theme text-text gap-2 md:gap-4"
+          >
+            <img
+              src="https://images.apollo247.in/images/ic-doctor.svg"
+              alt="icon"
+              className="md:size-7 size-5"
+            />
+            Book Your Appointment Now
+          </NavLink>
+          <NavLink
+            to={"/medicines/all"}
+            className="rounded flex w-fit items-center px-3 md:px-4 py-3 md:py-4 text-md text-md shadow-md hover:shadow-lg bg-main_theme hover:bg-dark_theme text-text gap-2 md:gap-4"
+          >
+            <img
+              src="https://www.svgrepo.com/download/88732/medicines.svg"
+              alt="icon"
+              className="md:size-7 size-5"
+            />
+            Buy Medicines and Essentials
+          </NavLink>
+        </section>
+
+        {/* image section */}
+        <section className="hidden absolute top-[50%] translate-y-[-50%] right-[0%] min-w-[700px] md:min-h-[450px] lg:flex items-end justify-center py-4">
+          {/* image container */}
+          <div className="overflow-hidden h-fit relative">
+            <img
+              src={heroImg}
+              alt="heroImage"
+              className="md:w-[500px] object-contain object-top translate-y-[2%]"
+            />
           </div>
 
-          <div className="lg:block hidden absolute bottom-5 right-96 bg-white border border-gray-300 rounded-lg shadow-lg shadow-lg-right shadow-lg-bottom px-6 py-4 mt-4 mr-4">
-            <p className="font-semibold">
-              <span>Prioritize your </span>
-              <br />
-              <span>mental health</span>
-            </p>
+          <div className="hidden absolute top-[20%] left-[-3%] bg-white/40 backdrop-filter backdrop-blur-md rounded-md shadow-md px-4 py-4 md:flex items-center gap-3 text-dark_theme ">
+            <img src={tick} alt="tick" />
+            <p className="font-semibold">50+ Experienced Doctors</p>
           </div>
-        </div>
-      </div>
+          <div className="hidden md:absolute top-[45%] right-[-10%] bg-white/40 backdrop-filter backdrop-blur-md rounded-md shadow-md px-4 py-4 md:flex items-center gap-3 text-dark_theme ">
+            <img src={tick} alt="tick" />
+            <p className="font-semibold">20+ Medical Achievements</p>
+          </div>
+
+          <div className="absolute bottom-[-5%] left-[-6%] bg-white/40 backdrop-filter backdrop-blur-md rounded-md shadow-md px-6 py-4 flex flex-col items-start text-dark_theme space-y-7">
+            {/* iamge div */}
+            <div className="flex items-center gap-4">
+              <img
+                src={hero}
+                alt="hero"
+                className="w-14 h-14 px-1 py-1 object-cover bg-main_theme/20 backdrop-blur-md rounded-full border border-dark_theme"
+              />
+              <div className="">
+                <h2 className="font-semibold">Dr.Harish Shukla</h2>
+                <p className="font-normal text-text_grey/90">Cardiologist</p>
+              </div>
+            </div>
+            <p className="font-semibold text-center">Make Appointment</p>
+          </div>
+        </section>
+      </section>
     </div>
-    //     </div>
-    //   ))}
-    // </Slider>
   );
 }
 
