@@ -1,37 +1,74 @@
-import React, { useState, useEffect } from "react";
-import { axios } from "../import-export/ImportExport";
-import DoctorsCard from "../components/DoctorsCard";
+import React from 'react';
+import Navbar from '../components/Navbar';
+import Doctors from '../components/Doctors'; 
+import '../components/app.css'
+
 
 function AllDoctors() {
-  const [doctors, setDoctors] = useState([]);
-
-  useEffect(() => {
-    const fetchDoctors = async () => {
-      try {
-        const response = await axios.get("/user/doctors/getall");
-        console.log(response.data); // Check the structure of the response data
-        setDoctors(response.data.data); // Assuming response.data.data contains the list of doctors
-      } catch (error) {
-        console.error("Error fetching doctors:", error);
-      }
-    };
-
-    fetchDoctors();
-  }, []);
-
-  return (
-    <div className="w-full my-20">
-      <section className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-x-10 gap-y-4 items-center md:items-start justify-center md:justify-between h-full px-3 py-1">
-        {/* Search doctors component */}
-        {/* code here */}
-
-        {/* Doctors components */}
-        {doctors.map((doctor) => (
-          <DoctorsCard key={doctor._id} doctor={doctor} />
-        ))}
-      </section>
-    </div>
-  );
+    const doctorsData = [
+        {
+          name: 'Nirmal Kolte',
+          qualification: 'MBBS, MD - General Medicine',
+          title: 'Cardiologist',
+          experience:"8 Years",
+          languages: 'English, Hindi',
+          location: 'Mumbai',
+          fees: 500,
+          imageUrl: 'https://example.com/doctor-images/nirmal-kolte.jpg',
+        },
+        {
+          name: 'Priya Sharma',
+          qualification: 'BDS - Dentistry',
+          title: 'Dentist',
+          experience:'2 Years',
+          languages: 'English, Marathi',
+          location: 'Pune',
+          fees:1000,
+          imageUrl: 'https://example.com/doctor-images/priya-sharma.jpg',
+        },
+        {
+          name: 'Akhil Kapoor',
+          qualification: 'MD - Pediatrics',
+          title: 'Pediatrician',
+          experience:'3 Years',
+          languages: 'English, Tamil',
+          location: 'Chennai',
+          fees:500,
+          imageUrl: 'https://example.com/doctor-images/akhil-kapoor.jpg', 
+        },
+        {
+            name: 'Akhil Kapoor',
+            qualification: 'MD - Pediatrics',
+            title: 'Pediatrician',
+            experience:'6 Years',
+            languages: 'English, Tamil',
+            location: 'Chennai',
+            fees:500,
+            imageUrl: 'https://example.com/doctor-images/akhil-kapoor.jpg',
+          },
+          {
+            name: 'Nirmal Kolte',
+            qualification: 'MBBS, MD - General Medicine',
+            title: 'Cardiologist',
+            experience:"8 Years",
+            languages: 'English, Hindi',
+            location: 'Mumbai',
+            fees: 500,
+            imageUrl: 'https://example.com/doctor-images/nirmal-kolte.jpg',
+          }
+      ];
+      return (
+        <>
+          {/* <Navbar />  */}
+          <div className="all-doctors-container">
+            <div className="doctor-cards">
+              {doctorsData.map((doctor) => (
+                <Doctors key={doctor.name} doctor={doctor} />
+              ))}
+            </div>
+          </div>
+        </>
+      );    
 }
 
 export default AllDoctors;
