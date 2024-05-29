@@ -8,7 +8,7 @@ import { generateToken } from "../utilis/jwtToken.js";
 //! Login the user
 export const login = asyncHandler(async (req, res, next) => {
     // taking the info from the user
-    const { email, password, confirmPassword, role } = req.body;
+    const { email, password, confirmPassword, role, token } = req.body;
 
     // checking the info provided by the user
     if (!email || !password || !confirmPassword || !role) {
@@ -17,6 +17,18 @@ export const login = asyncHandler(async (req, res, next) => {
     // check if password and confirm password matches
     if (password !== confirmPassword) {
         throw new ApiError(400, "Password and Confirm Password do not match!");
+    }
+
+    // Verify the reCAPTCHA token
+    const response = await axios.post('https://www.google.com/recaptcha/api/siteverify', null, {
+        params: {
+            secret: '6LdzteopAAAAAHwBYUTrGjupn-LuF8ox6Uc7n1Uy',
+            response: token
+        }
+    });
+    
+    if (!response.data.success) {
+        throw new ApiError(400, "reCAPTCHA verification failed");
     }
 
     // ! checking the user provide correct details for login
