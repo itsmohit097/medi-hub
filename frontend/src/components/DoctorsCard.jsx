@@ -4,17 +4,23 @@ import { NavLink } from "react-router-dom";
 import { FaHospital, FaVideo } from "react-icons/fa";
 import hero from "/new_hero.png";
 import langIcon from "/language.webp";
+import SkeletonLoading from "./SkeltonLoading";
 
 const DoctorsCard = ({ doctor }) => {
+  if (!doctor) return <SkeletonLoading />;
   return (
     <>
       <section className="border-2 border-dark_theme rounded-md shadow-lg py-1 px-1">
         <div className="flex gap-4 px-4 py-3 ">
+          {/* Avatar with lazy loading */}
           <img
-            src={hero}
+            src={doctor.docAvatar || hero}
             alt="hero"
             className="w-20 h-20 px-1 py-1 object-cover bg-main_theme/20 backdrop-blur-md rounded-full border border-dark_theme mt-2"
+            loading="lazy"
           />
+
+          {/* Details */}
           <div className="doc-details overflow-hidden w-fit">
             <h2 className="font-semibold text-lg tracking-wider text-dark_theme">
               Dr. {doctor.firstName} {doctor.lastName}
@@ -75,6 +81,7 @@ const DoctorsCard = ({ doctor }) => {
           </p>
         </div>
 
+        {/* /* Actions */}
         {/* Ctas */}
         <div className="ctas grid grid-cols-1 md:grid-cols-2 gap-1">
           <NavLink className="bg-dark_theme/95 hover:bg-dark_theme text-text px-4 py-4 rounded border-none font-medium text-sm tracking-tighter flex items-center justify-center md:justify-normal">

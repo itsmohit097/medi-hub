@@ -25,7 +25,8 @@ export default {
         pastel_pink: "#FCEDF2",
         cart_orange: "#FF8945",
         text: "#ffffff",
-        text_grey: "#464646"
+        text_grey: "#464646",
+        "medicine-banner": "#162C2A",
       },
       // height:{
       //   heroHeihgt:"calc"

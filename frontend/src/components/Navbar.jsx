@@ -2,7 +2,13 @@ import { NavLink } from "react-router-dom";
 import React, { useState } from "react";
 
 // react icons
-import { FaDiscord, FaGithub, FaLinkedinIn, FaBars, FaTimes } from "react-icons/fa";
+import {
+  FaDiscord,
+  FaGithub,
+  FaLinkedinIn,
+  FaBars,
+  FaTimes,
+} from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegCalendarCheck, FaRegHeart } from "react-icons/fa";
 import { LuBox } from "react-icons/lu";
@@ -64,8 +70,8 @@ function Navbar() {
   ];
 
   return (
-    <div className="w-full h-16 bg-white shadow-md fixed top-0 z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-between lg:px-6 md:px-4 px-3 py-1 h-full">
+    <div className="w-full h-16 bg-light_theme fixed top-0 z-50">
+      <div className="max-w-7xl mx-auto flex items-center justify-between md:px-8 px-3 py-1 h-full">
         {/* logo */}
         <div className="flex items-center gap-3">
           <NavLink to="/">
@@ -76,7 +82,7 @@ function Navbar() {
         </div>
 
         {/* Nav Menus */}
-        <div className="hidden md:flex items-center justify-between gap-8">
+        <div className="hidden lg:flex items-center justify-between gap-8">
           <ul className="flex gap-8 items-center">
             {navItems.map((navItem, index) => (
               <li key={index}>
@@ -124,14 +130,14 @@ function Navbar() {
         </div>
 
         {/* Mobile Menu Toggle */}
-        <div className="md:hidden flex items-center">
+        <div className="lg:hidden flex items-center">
           <button onClick={toggleMobileMenu} className="text-dark_theme">
             {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
         </div>
 
         {/* Social Icons and Cart (desktop) */}
-        <div className="hidden md:flex gap-3 items-center relative">
+        <div className="hidden lg:flex gap-3 items-center relative">
           <NavLink to={"/medicine-cart"}>
             <IoCartOutline className="text-dark_theme size-8 hidden md:block mr-1" />
             <div className="absolute bottom-4 left-4 border border-main_theme rounded-full cursor-pointer z-50 bg-main_theme/90 text-light_theme">
@@ -149,11 +155,15 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white w-full fixed top-16 z-40">
-          <ul className="flex flex-col items-center py-4 bg-white shadow-lg">
+        <div className="lg:hidden bg-light_theme w-full md:max-w-64  absolute top-16 right-7 z-50 border-t border-text_grey/30 md:rounded-md px-4 md:border md:border-dark_theme">
+          <ul className="flex flex-col items-center py-4 bg-light_theme ">
             {navItems.map((navItem, index) => (
               <li key={index} className="mb-4">
-                <NavLink to={navItem.to} className={navLinkClass} onClick={toggleMobileMenu}>
+                <NavLink
+                  to={navItem.to}
+                  className={navLinkClass}
+                  onClick={toggleMobileMenu}
+                >
                   {navItem.label}
                 </NavLink>
               </li>
