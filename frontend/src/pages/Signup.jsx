@@ -39,17 +39,7 @@ function Signup() {
     console.log("form data", formData);
     toast.success('Form submitted successfully!'); 
   };
-    const handleSignup = (e) => {
-        e.preventDefault();
-        const { password, cpassword } = formData;
-        if (password !== cpassword) {
-            toast.error("Passwords do not match!");
-            return;
-        }
-        toast.success("Form submitted successfully!");
-    };
-
-
+	
     useEffect(() => {
         checkStrength(formData.password);
     }, [formData.password]);
