@@ -132,7 +132,7 @@ function Navbar() {
 
         {/* Social Icons and Cart (desktop) */}
         <div className="hidden md:flex gap-3 items-center relative">
-          <NavLink to="/cartpage">
+          <NavLink to={"/medicine-cart"}>
             <IoCartOutline className="text-dark_theme size-8 hidden md:block mr-1" />
             <div className="absolute bottom-4 left-4 border border-main_theme rounded-full cursor-pointer z-50 bg-main_theme/90 text-light_theme">
               <span className="px-2 py-2 text-xs font-medium">7</span>
