@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import backgroundImage from "/istockphoto-1073154998-612x612.jpg"; // Import your background image
 import { toast } from 'react-toastify'; // Import toast from react-toastify
-import showEye from "../../public/showEye.svg";
-import hideEye from "../../public/hideEye.svg";
+import showEye from "/showEye.svg";
+import hideEye from "/hideEye.svg";
 function Login() {
   const [password, setPassword] = useState(false);
   const [formData, setFormData] = useState({
@@ -34,7 +34,8 @@ function Login() {
         backgroundImage:`url(${backgroundImage})`,
         backgroundRepeat:'no-repeat',
         backgroundSize:'cover',
-        backgroundPosition:'center',
+        backgroundPosition: 'center',
+        paddingTop: '4rem',
       }}
     >
       <div className='bg-white bg-opacity-70 shadow-lg border border-black rounded-md p-5 w-full md:w-[50%] m-4'>

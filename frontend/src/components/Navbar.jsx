@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import React, { useState } from "react";
 
 // react icons
-import { FaDiscord, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaDiscord, FaGithub, FaLinkedinIn, FaBars, FaTimes } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegCalendarCheck, FaRegHeart } from "react-icons/fa";
 import { LuBox } from "react-icons/lu";
@@ -12,8 +12,9 @@ import { FaRegCircleUser } from "react-icons/fa6";
 function Navbar() {
   // state to manage drop down menu
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  //mouse events
+  // mouse events
   const handleMouseEnter = () => {
     setDropdownOpen(true);
   };
@@ -22,9 +23,13 @@ function Navbar() {
     setDropdownOpen(false);
   };
 
+  // mobile menu toggle
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   // Nav items array
   const navItems = [
-    // { to: "/", label: "Home" },
     { to: "/alldoctors", label: "All Doctors" },
     { to: "/specialities", label: "Specialities" },
     { to: "/medicines", label: "Medicines" },
@@ -59,11 +64,11 @@ function Navbar() {
   ];
 
   return (
-    <div className={"w-full h-16 bg-light_theme/20  top-0 z-50 shadow-md"}>
-      <div className="max-w-7xl mx-auto flex items-center justify-between lg:px-6 md:px-4 px-3 py-1  h-full">
+    <div className="w-full h-16 bg-white shadow-md fixed top-0 z-50">
+      <div className="max-w-7xl mx-auto flex items-center justify-between lg:px-6 md:px-4 px-3 py-1 h-full">
         {/* logo */}
         <div className="flex items-center gap-3">
-          <NavLink to={"/"}>
+          <NavLink to="/">
             <h1 className="text-3xl text-dark_theme tracking-wide font-bold">
               MediHub
             </h1>
@@ -71,8 +76,8 @@ function Navbar() {
         </div>
 
         {/* Nav Menus */}
-        <div className="hidden md:block">
-          <ul className="flex justify-between gap-8 items-center">
+        <div className="hidden md:flex items-center justify-between gap-8">
+          <ul className="flex gap-8 items-center">
             {navItems.map((navItem, index) => (
               <li key={index}>
                 <NavLink to={navItem.to} className={navLinkClass}>
@@ -86,7 +91,7 @@ function Navbar() {
               onMouseLeave={handleMouseLeave}
             >
               <NavLink
-                to={"/login"}
+                to="/login"
                 className="text-md font-semibold relative cursor-pointer rounded flex items-center border border-dark_theme text-dark_theme px-4 py-2 gap-2 max-w-[150px]"
               >
                 <FaRegCircleUser className="text-dark_theme" />
@@ -118,24 +123,92 @@ function Navbar() {
           </ul>
         </div>
 
+        {/* Mobile Menu Toggle */}
+        <div className="md:hidden flex items-center">
+          <button onClick={toggleMobileMenu} className="text-dark_theme">
+            {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </button>
+        </div>
+
+        {/* Social Icons and Cart (desktop) */}
         <div className="hidden md:flex gap-3 items-center relative">
-          <NavLink to={"/cartpage"}>
+          <NavLink to="/cartpage">
             <IoCartOutline className="text-dark_theme size-8 hidden md:block mr-1" />
             <div className="absolute bottom-4 left-4 border border-main_theme rounded-full cursor-pointer z-50 bg-main_theme/90 text-light_theme">
               <span className="px-2 py-2 text-xs font-medium">7</span>
             </div>
           </NavLink>
 
-          {/* social icons */}
           {socialLinks.map((socialLink, index) => (
             <NavLink key={index} to={socialLink.to} target="_blank">
-              {/* <div className=" hover:border border-text_grey rounded-full px-2 py-2 hover:hover:bg-text_grey/10 cursor-pointer"> */}
               <socialLink.icon className="text-dark_theme/90 size-5 hidden md:block hover:scale-110" />
-              {/* </div> */}
             </NavLink>
           ))}
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-white w-full fixed top-16 z-40">
+          <ul className="flex flex-col items-center py-4 bg-white shadow-lg">
+            {navItems.map((navItem, index) => (
+              <li key={index} className="mb-4">
+                <NavLink to={navItem.to} className={navLinkClass} onClick={toggleMobileMenu}>
+                  {navItem.label}
+                </NavLink>
+              </li>
+            ))}
+            <li className="relative hover:scale-105 mb-4">
+              <NavLink
+                to="/login"
+                className="text-md font-semibold relative cursor-pointer rounded flex items-center border border-dark_theme text-dark_theme px-4 py-2 gap-2"
+                onClick={toggleMobileMenu}
+              >
+                <FaRegCircleUser className="text-dark_theme" />
+                <span className="truncate">Login</span>
+              </NavLink>
+
+              {/* Dropdown Menus */}
+              {isDropdownOpen && (
+                <div className="w-full bg-light_theme border border-dark_theme rounded shadow-lg z-50 mt-2">
+                  {dropdownMenus.map((menu, index) => (
+                    <NavLink
+                      key={index}
+                      to={menu.to}
+                      className="flex items-center px-4 py-3 gap-2 text-sm font-medium text-dark_theme hover:bg-main_theme/10"
+                      onClick={toggleMobileMenu}
+                    >
+                      {menu.icon && (
+                        <menu.icon className="text-dark_theme size-4" />
+                      )}{" "}
+                      {menu.label}
+                    </NavLink>
+                  ))}
+                </div>
+              )}
+            </li>
+
+            {/* Social Icons (mobile) */}
+            <div className="flex gap-3 items-center justify-center mb-4">
+              {socialLinks.map((socialLink, index) => (
+                <NavLink key={index} to={socialLink.to} target="_blank">
+                  <socialLink.icon className="text-dark_theme/90 size-5 hover:scale-110" />
+                </NavLink>
+              ))}
+            </div>
+
+            {/* Cart (mobile) */}
+            <div className="relative">
+              <NavLink to="/cartpage">
+                <IoCartOutline className="text-dark_theme size-8 mr-1" />
+                <div className="absolute bottom-4 left-4 border border-main_theme rounded-full cursor-pointer z-50 bg-main_theme/90 text-light_theme">
+                  <span className="px-2 py-2 text-xs font-medium">7</span>
+                </div>
+              </NavLink>
+            </div>
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
