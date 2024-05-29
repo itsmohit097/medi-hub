@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { AddtoUserCart, getMedicines } from '../Api';
-function SingalMedicine() {
+function SingleMedicine() {
   const [product, setproduct] = useState({})
   const productId = useParams().id
   const [loading, setLoading] = useState(true)
@@ -70,4 +70,4 @@ function SingalMedicine() {
   )
 }
 
-export default SingalMedicine
+export default SingleMedicine

@@ -10,6 +10,8 @@
 * {
     /* font-family: "Montserrat", sans-serif; */
     font-family: "poppins";
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {

@@ -7,7 +7,7 @@ import hero from "/new_hero.png";
 
 function Hero() {
   return (
-    <div className={`bg-light_theme w-full h-lvh relative `}>
+    <div className="bg-light_theme w-full h-[92vh] my-16 relative">
       <section className="relative max-w-7xl mx-auto flex flex-col items-center md:items-start justify-center md:justify-between h-full lg:px-6  px-3 py-1">
         {/* text container */}
         <section className="md:absolute md:top-[50%] md:translate-y-[-50%] md:left-[50%] md:translate-x-[-50%] lg:left-0 lg:translate-x-0 flex flex-col max-w-lg gap-y-6">
