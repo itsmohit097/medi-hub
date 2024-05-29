@@ -4,7 +4,7 @@ import asyncHandler from "../utilis/asyncHandler.js";
 import { UserCart } from "../models/UserCart.model.js";
 
 
-export const addToCart = asyncHandler(async (req, res) => {
+export const ToggleCart = asyncHandler(async (req, res) => {
     const { userId, medicineId, quantity, totalPrice, status } = req.body;
 
     if (!userId || !medicineId || !quantity || !totalPrice) {
@@ -12,8 +12,11 @@ export const addToCart = asyncHandler(async (req, res) => {
     }
 
     let existedCart = await UserCart.findOne({ userId, medicineId });
+    console.log("existedCart values bib",existedCart);
     if (existedCart) {
-        throw new ApiError(400, `Medicine with this Name already exists`);
+        const remvefromcart =  await UserCart.findByIdAndDelete( existedCart._id);
+        console.log("existedCart",remvefromcart);
+        return res.json(new ApiResponse(200, {remvefromcart:true}, "Medicine Deleted from Cart Successfully!"));
     }
 
     const cart = await UserCart.create({

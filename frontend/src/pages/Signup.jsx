@@ -26,16 +26,20 @@ function Signup() {
         }));
     };
 
-    const handleSignup = (e) => {
-        e.preventDefault();
-        const { password, cpassword } = formData;
-        if (password !== cpassword) {
-            toast.error("Passwords do not match!");
-            return;
-        }
-        toast.success("Form submitted successfully!");
-    };
-
+  // Function to handle form submission
+  const handleSignup = (e) => {
+    e.preventDefault(); // Prevent default form submission behavior
+    const { password, cpassword } = formData;
+    if (password !== cpassword) {
+      // Show error toast if passwords do not match
+      toast.error('Passwords do not match!'); 
+      return;
+    }
+    // Continue with signup logic if passwords match
+    console.log("form data", formData);
+    toast.success('Form submitted successfully!'); 
+  };
+	
     useEffect(() => {
         checkStrength(formData.password);
     }, [formData.password]);
