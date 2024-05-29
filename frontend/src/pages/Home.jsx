@@ -1,14 +1,15 @@
 import React from 'react'
-import { Contributors, Hero, WhyUs, } from "../import-export/ImportExport";
+import { Contributors, Hero, WhyUs,WhatIsMedihub } from "../import-export/ImportExport";
 
 function Home() {
     return (
-        <>
-            <Hero />
-            <WhyUs />
-            <Contributors />
-        </>
-    )
+      <>
+        <Hero />
+        <WhyUs />
+        <WhatIsMedihub />
+        <Contributors />
+      </>
+    );
 }
 
 export default Home

@@ -6,6 +6,7 @@ import WhyUs from "../components/WhyUs.jsx";
 import Contributors from "../components/Contributors.jsx";
 import AppointmentLocation from "../components/AppointmentLocation.jsx";
 import Departments from "../components/Departments.jsx";
+import WhatIsMedihub from "../components/WhatIsMedihub.jsx";
 
 // Pages
 import Home from "../pages/Home.jsx";
@@ -19,4 +20,4 @@ import ErrorPage from "../pages/ErrorPage.jsx";
 
 import axios from "../axios/axios.jsx";
 
-export { axios, Navbar, Footer, Home, Hero, WhyUs, Contributors, Appointment, AppointmentLocation, Departments, AllDoctors, AboutUs , Login , Signup , ErrorPage};
+export { axios, Navbar, Footer, Home, Hero, WhyUs, Contributors, Appointment, AppointmentLocation, Departments, AllDoctors, AboutUs , Login , Signup , ErrorPage,WhatIsMedihub};
