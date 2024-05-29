@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import useRazorpay from 'react-razorpay';
-import { CheckoutPayment, GetUserCart, deleteFromUserCart, paymentVerification } from '../Api';
+import { CheckoutPayment, GetUserCart, deleteFromUserCart, getMedicines, paymentVerification } from '../Api';
 import { ToastContainer, toast } from 'react-toastify';
+import { GetStore } from '../helper/Medcinefuncations';
 const AddtoCart = () => {
   const [cartItems, setCartItems] = useState([]);
   const [totalItems, setTotalItems] = useState(0);
@@ -9,15 +10,19 @@ const AddtoCart = () => {
   
   // add the varaible for the getting  user id  is UserId
 
-  const GetUsercartitems =()=> GetUserCart(UserId).then((res)=>{
-    setCartItems(res.data)
-  }).catch((err)=>{
-    console.log(err);
-    toast.error("check internet connection");
-  })
+  const GetUsercartitems =()=>{ 
+    const CartIds = GetStore();
+    CartIds.forEach((element) => {
+       getMedicines(element.medicineId).then((res) => {
+        setCartItems((prev) => {
+          return [...prev  , { ...res.data, cartId: element.CartId, quantity: element.quantity ,totalPrice: element.totalPrice}];
+        });
+       })
+    });
+  }
 
   useEffect(()=>{
-    GetUsercartitems()
+    GetUsercartitems();
   },[])
   const increaseQuantity = (itemId) => {
     const updatedCart = cartItems.map((item) =>
@@ -26,7 +31,7 @@ const AddtoCart = () => {
     setCartItems(updatedCart);
     calculateTotal();
   };
-
+  console.log("this are the no of cartitems",cartItems);
   const decreaseQuantity = (itemId) => {
     const updatedCart = cartItems.map((item) =>
       item.id === itemId && item.quantity > 0
@@ -106,16 +111,16 @@ const AddtoCart = () => {
 
 
   return (
-    <div className="container mx-auto p-6 bg-white rounded-lg shadow-md">
+    <div className="container mx-auto my-10 relative  p-6 bg-white rounded-lg shadow-md flex gap-4">
       <ToastContainer/>
+      <div className="divide-y divide-gray-500 w-8/12 ">
       <h2 className="text-2xl font-bold mb-4">My Cart</h2>
-      <div className="divide-y divide-gray-200">
         {cartItems.map((item) => (
-          <div key={item.id} className="flex  justify-between items-center py-4">
-            <img src={medi.image} alt={medi.name} className='w-full h-20 object-cover mb-2' />
-            <div className='flex flex-col items-center gap-8'>
+          <div key={item.id} className="flex items-center border-2 m-2 py-4 rounded-lg">
+            <img src={item.image} alt={item.name} className='w-[40%] object-cover mb-2 ' />
+            <div className='flex flex-col items-center m-2'>
             <span className="text-lg font-medium">{item.name}</span>
-            <p className='text-gray-500 mb-4'>{item.discription?.split(' ').slice(0, 10).join(' ') + '...'}</p>
+            <p className='text-gray-500 mb-4'>{item.description?.split(' ').slice(0, 23).join(' ') + '...'}</p>
 
             <div className="flex items-center">
               <button
@@ -143,7 +148,7 @@ const AddtoCart = () => {
           </div>
         ))}
       </div>
-      <div className="mt-4">
+      <div className="mt-10 w-4/12 sticky top-0">
         <div className="flex justify-between">
           <span>Total Items:</span>
           <span className="font-bold">{totalItems}</span>

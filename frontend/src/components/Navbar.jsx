@@ -7,7 +7,7 @@ function Navbar() {
 
   return (
     <div
-      className={"w-full h-[8vh]  bg-main_theme fixed top-0 z-50 shadow-md"}
+      className={"sticky bg-main_theme w-full h-16   top-0 z-50 shadow-md"}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between lg:px-6  px-3 py-1">
         {/* logo */}
@@ -87,7 +87,7 @@ function Navbar() {
         {/* social icons */}
         <div className="flex gap-4 items-center">
           <NavLink
-            target="_blank"
+            to={"/medicine-cart"}
           >
             <FaShoppingCart className="text-text size-5 hidden md:block hover:scale-110" />
           </NavLink>

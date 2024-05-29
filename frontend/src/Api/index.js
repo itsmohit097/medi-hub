@@ -41,7 +41,7 @@ const getCategoryMedicines = async (category, page) => {
         return error;
     }
 }
-const AddtoUserCart = async ({medicineId, quantity, price, discount}) => {
+const AddtoUserCart = async ({medicineId, quantity= 1, price, discount}) => {
     try {
         const response = await axios.post(`${base_url}/medicines-cart/add-to-cart`, {
             userId: user._id,
