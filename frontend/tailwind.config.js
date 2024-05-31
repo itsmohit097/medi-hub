@@ -27,6 +27,7 @@ export default {
         text: "#ffffff",
         text_grey: "#464646",
         "medicine-banner": "#162C2A",
+        lower_footer_green: "#03565A"
       },
       // height:{
       //   heroHeihgt:"calc"
