@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 import Hero from "../components/Hero.jsx";
 import WhyUs from "../components/WhyUs.jsx";
-import Contributors from "../components/Contributors.jsx";
+import Contributors from "../components/OurContributors.jsx";
 import AppointmentLocation from "../components/AppointmentLocation.jsx";
 import Departments from "../components/Departments.jsx";
 import WhatIsMedihub from "../components/WhatIsMedihub.jsx";
