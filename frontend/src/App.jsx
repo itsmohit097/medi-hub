@@ -23,6 +23,8 @@ import {
   Medicines,
   GoToTop,
 } from "./import-export/ImportExport.js";
+import TopSpecialitiesCard from "./components/TopSpecialitiesCard.jsx";
+import SpecialitiesPage from "./pages/SpecialitiesPage.jsx";
 
 function App() {
   return (
@@ -42,6 +44,7 @@ function App() {
           <Route path="/medicine-cart" element={<AddtoCart />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/specialities" element={<SpecialitiesPage/>}/>
           <Route path="/*" element={<ErrorPage />} />
         </Routes>
         <GoToTop />
