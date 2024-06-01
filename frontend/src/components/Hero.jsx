@@ -8,7 +8,7 @@ import hero from "/new_hero.png";
 function Hero() {
   return (
     <div className="bg-light_theme w-full h-[92vh] my-16 relative">
-      <section className="relative max-w-7xl mx-auto flex flex-col items-center md:items-start justify-center md:justify-between h-full lg:px-6  px-3 py-1">
+      <section className="relative max-w-7xl mx-auto flex flex-col items-center md:items-start justify-center md:justify-between h-full lg:px-6 px-3 py-1">
         {/* text container */}
         <section className="md:absolute md:top-[50%] md:translate-y-[-50%] md:left-[50%] md:translate-x-[-50%] lg:left-0 lg:translate-x-0 flex flex-col max-w-lg gap-y-6">
           {/* heading */}
@@ -47,7 +47,6 @@ function Hero() {
             Buy Medicines and Essentials
           </NavLink>
         </section>
-
         {/* image section */}
         <section className="hidden absolute top-[50%] translate-y-[-50%] right-[0%] min-w-[700px] md:min-h-[450px] lg:flex items-end justify-center py-4">
           {/* image container */}
@@ -55,20 +54,20 @@ function Hero() {
             <img
               src={heroImg}
               alt="heroImage"
-              className="md:w-[500px] object-contain object-top translate-y-[2%]"
+              className="md:w-[600px] object-contain object-top translate-y-[2%]"
             />
           </div>
 
-          <div className="hidden absolute top-[20%] left-[-3%] bg-white/40 backdrop-filter backdrop-blur-md rounded-md shadow-md px-4 py-4 md:flex items-center gap-3 text-dark_theme ">
+          <div className="hidden absolute top-[30%] left-[-3%] bg-white/40 backdrop-filter backdrop-blur-md rounded-md shadow-md px-4 py-4 md:flex items-center gap-3 text-dark_theme ">
             <img src={tick} alt="tick" />
             <p className="font-semibold">50+ Experienced Doctors</p>
           </div>
-          <div className="hidden md:absolute top-[45%] right-[-10%] bg-white/40 backdrop-filter backdrop-blur-md rounded-md shadow-md px-4 py-4 md:flex items-center gap-3 text-dark_theme ">
+          <div className="hidden md:absolute top-[45%] right-[-0%] bg-white/40 backdrop-filter backdrop-blur-md rounded-md shadow-md px-4 py-4 md:flex items-center gap-3 text-dark_theme ">
             <img src={tick} alt="tick" />
             <p className="font-semibold">20+ Medical Achievements</p>
           </div>
 
-          <div className="absolute bottom-[-5%] left-[-6%] bg-white/40 backdrop-filter backdrop-blur-md rounded-md shadow-md px-6 py-4 flex flex-col items-start text-dark_theme space-y-7">
+          <div className="absolute bottom-[-3%] left-[-2%] bg-white/40 backdrop-filter backdrop-blur-md rounded-md shadow-md px-6 py-4 flex flex-col items-start text-dark_theme space-y-7">
             {/* iamge div */}
             <div className="flex items-center gap-4">
               <img
