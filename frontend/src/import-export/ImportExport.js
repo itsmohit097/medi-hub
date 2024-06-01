@@ -12,6 +12,7 @@ import GoToTop from "../components/GoToTop.jsx";
 import Pagination from "../components/Paginations.jsx";
 import MedicineCard from "../components/MedicineCard.jsx";
 import Bot from "../components/Bot.jsx";
+import FAQSection from "../components/Faq.jsx";
 
 
 // Pages
@@ -31,4 +32,4 @@ import Medicines from "../pages/Medicines.jsx";
 
 import axios from "../axios/axios.jsx";
 
-export { axios, Navbar, Footer, Home, Hero, WhyUs, Contributors, Appointment, AppointmentLocation, Departments, AllDoctors, AboutUs, Login, Signup, ErrorPage, WhatIsMedihub, SkeletonLoading, TermsAndConditions, PrivacyPolicy, AddtoCart, Categoryitems, SingleMedicine, Medicines, GoToTop, Pagination, MedicineCard,Bot };
+export { axios, Navbar, Footer, Home, Hero, WhyUs, Contributors, Appointment, FAQSection, AppointmentLocation, Departments, AllDoctors, AboutUs, Login, Signup, ErrorPage, WhatIsMedihub, SkeletonLoading, TermsAndConditions, PrivacyPolicy, AddtoCart, Categoryitems, SingleMedicine, Medicines, GoToTop, Pagination, MedicineCard,Bot };

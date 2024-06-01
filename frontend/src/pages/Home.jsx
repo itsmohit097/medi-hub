@@ -1,5 +1,5 @@
 import React from 'react'
-import { Contributors, Hero, WhatIsMedihub, WhyUs, } from "../import-export/ImportExport";
+import { Contributors, FAQSection, Hero, WhatIsMedihub, WhyUs} from "../import-export/ImportExport";
 
 function Home() {
     return (
@@ -8,6 +8,7 @@ function Home() {
             <WhyUs />
             <WhatIsMedihub/>
             <Contributors />
+            <FAQSection />
         </>
     )
 }
