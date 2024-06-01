@@ -13,7 +13,7 @@ function MediHubBot() {
   const [theme,setTheme] = useState("light");
   const [error,setError] = useState(null);
 
-  const API_KEY = ''
+  const API_KEY = 'AIzaSyBg4j41yT2J-T8eICokadPtAvkIe5UxKEA'
   const MODEL_NAME = 'gemini-1.0-pro-001';
 
   const genAI = new GoogleGenerativeAI(API_KEY);
