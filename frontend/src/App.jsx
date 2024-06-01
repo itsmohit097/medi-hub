@@ -22,6 +22,7 @@ import {
   SingleMedicine,
   Medicines,
   GoToTop,
+  Bot
 } from "./import-export/ImportExport.js";
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/*" element={<ErrorPage />} />
         </Routes>
+        <Bot/>
         <GoToTop />
         <Footer />
         <ToastContainer position="top-center" />
