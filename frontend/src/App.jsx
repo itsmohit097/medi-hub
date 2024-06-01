@@ -22,6 +22,7 @@ import {
   SingleMedicine,
   Medicines,
   GoToTop,
+  OrderedProduct,
   Bot
 } from "./import-export/ImportExport.js";
 import TopSpecialitiesCard from "./components/TopSpecialitiesCard.jsx";
@@ -47,6 +48,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/specialities" element={<SpecialitiesPage/>}/>
           <Route path="/*" element={<ErrorPage />} />
+          <Route path="/order" element={<OrderedProduct/>}/>
         </Routes>
         <Bot/>
         <GoToTop />
