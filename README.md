@@ -6,7 +6,7 @@
 <br/>
 
 Join Our Discord Server:- <br>
-![![image](https://github.com/Sibam-Paul/medi-hub/assets/158052549/1a6285d4-b437-46da-bc23-fe061993538a)](https://discord.gg/krQd2Fss)
+[![image](https://github.com/Sibam-Paul/medi-hub/assets/158052549/bf523a4b-e332-4234-901a-cc1597fa7741)](https://discord.gg/krQd2Fss)
 
 <br/>
 
