@@ -13,7 +13,7 @@ function Navbar() {
   // state to manage drop down menu
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
-  //mouse events
+  // mouse events
   const handleMouseEnter = () => {
     setDropdownOpen(true);
   };
@@ -60,11 +60,12 @@ function Navbar() {
 
   return (
     <div className={"w-full h-16 bg-light_theme/20  top-0 z-50 shadow-md"}>
-      <div className="max-w-7xl mx-auto flex items-center justify-between lg:px-6 md:px-4 px-3 py-1  h-full">
-        {/* logo */}
+      <div className="max-w-7xl mx-auto flex items-center justify-between lg:px-6 md:px-4 px-3 py-1 h-full">
+        {/* logo and text */}
         <div className="flex items-center gap-3">
-          <NavLink to={"/"}>
-            <h1 className="text-3xl text-dark_theme tracking-wide font-bold">
+          <NavLink to={"/"} className="flex items-center gap-3">
+            <img src="/newlogo.png" alt="Logo" className="h-[60px] w-auto" />
+            <h1 className="text-4xl text-dark_theme tracking-wide font-bold">
               MediHub
             </h1>
           </NavLink>
