@@ -22,6 +22,7 @@ import {
   SingleMedicine,
   Medicines,
   GoToTop,
+  OrderedProduct
 } from "./import-export/ImportExport.js";
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/*" element={<ErrorPage />} />
+          <Route path="/order" element={<OrderedProduct/>}/>
         </Routes>
         <GoToTop />
         <Footer />
