@@ -1,7 +1,6 @@
 // Card.js
 import React from 'react';
 import './Card.css'; // Import the Card styles
-
 const Card = ({ imageSrc, contributor,cont }) => (
   <div className="card">
     <div className="card-image-container">
