@@ -14,8 +14,8 @@ import MedicineCard from "../components/MedicineCard.jsx";
 import Bot from "../components/Bot.jsx";
 import FAQSection from "../components/Faq.jsx";
 import Testamonial from "../components/Testamonial.jsx";
-import OrderedProduct from "../components/CartPage.jsx";
-
+import TopSpecialities from "../components/TopSpecialities.jsx";
+// import OrderedProduct from "../components/CartPage.jsx";
 
 // Pages
 import Home from "../pages/Home.jsx";
@@ -41,6 +41,7 @@ export {
   AppointmentLocation, Departments, AllDoctors, AboutUs, Login, Signup, ErrorPage,
   WhatIsMedihub, SkeletonLoading, TermsAndConditions, PrivacyPolicy, AddtoCart,
   Categoryitems, SingleMedicine, Medicines, GoToTop, Pagination, MedicineCard,
-  Bot, Testamonial, CartPage
+  Bot, Testamonial, CartPage,TopSpecialities,
 };
+
 
