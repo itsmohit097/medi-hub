@@ -1,0 +1,41 @@
+/* Card.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0; /* Reduced padding */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 200px;
+    height: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0; /* Removed margin */
+    font-family: 'Poppins', sans-serif;
+  }
+  .card:hover {
+    border-color: #113C49; /* Change border color on hover */
+    cursor: pointer; /* Change cursor on hover */
+  }
+  .card-image-container {
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-top: 30px;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-text {
+    font-size: 1em;
+    color: #03565A;
+    text-align: center;
+    font-weight: 500;
+  }
+  
