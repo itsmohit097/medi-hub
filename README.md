@@ -5,7 +5,8 @@
 </div>
 <br/>
 
-Join Our Discord Server https://discord.gg/krQd2Fss
+### Join Our Discord Server: 
+[![image](https://github.com/Sibam-Paul/medi-hub/assets/158052549/bf523a4b-e332-4234-901a-cc1597fa7741)](https://discord.gg/krQd2Fss)
 
 <br/>
 

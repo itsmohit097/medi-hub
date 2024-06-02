@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 import Hero from "../components/Hero.jsx";
 import WhyUs from "../components/WhyUs.jsx";
-import Contributors from "../components/Contributors.jsx";
+import Contributors from "../components/OurContributors.jsx";
 import AppointmentLocation from "../components/AppointmentLocation.jsx";
 import Departments from "../components/Departments.jsx";
 import WhatIsMedihub from "../components/WhatIsMedihub.jsx";
@@ -13,7 +13,7 @@ import Pagination from "../components/Paginations.jsx";
 import MedicineCard from "../components/MedicineCard.jsx";
 import Bot from "../components/Bot.jsx";
 import FAQSection from "../components/Faq.jsx";
-
+import Testamonial from "../components/Testamonial.jsx";
 
 // Pages
 import Home from "../pages/Home.jsx";
@@ -32,4 +32,10 @@ import Medicines from "../pages/Medicines.jsx";
 
 import axios from "../axios/axios.jsx";
 
-export { axios, Navbar, Footer, Home, Hero, WhyUs, Contributors, Appointment, FAQSection, AppointmentLocation, Departments, AllDoctors, AboutUs, Login, Signup, ErrorPage, WhatIsMedihub, SkeletonLoading, TermsAndConditions, PrivacyPolicy, AddtoCart, Categoryitems, SingleMedicine, Medicines, GoToTop, Pagination, MedicineCard,Bot };
+export { 
+  axios, Navbar, Footer, Home, Hero, WhyUs, Contributors, Appointment, FAQSection, 
+  AppointmentLocation, Departments, AllDoctors, AboutUs, Login, Signup, ErrorPage, 
+  WhatIsMedihub, SkeletonLoading, TermsAndConditions, PrivacyPolicy, AddtoCart, 
+  Categoryitems, SingleMedicine, Medicines, GoToTop, Pagination, MedicineCard, 
+  Bot, Testamonial 
+};
