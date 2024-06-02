@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import backgroundImage from "/istockphoto-1073154998-612x612.jpg";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from 'react-helmet';
+import Lottie from 'react-lottie';
+import animationData from '../lottie-animation/loginAnimation.json'; // Replace with your Lottie animation file
 
 function Login() {
   const navigate = useNavigate();
@@ -33,7 +34,6 @@ function Login() {
       if (response.data.token) {
         localStorage.setItem('token', response.data.token);
         toast.success("Login successful");
-        // Redirect to dashboard or desired page
         navigate('/dashboard');
       } else {
         toast.error("Login failed");
@@ -44,65 +44,66 @@ function Login() {
     }
   };
 
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+  };
 
   return (
-    <div className='mt-10'>
+    <div className='flex h-screen' style={{ backgroundColor: 'rgb(179, 218, 217)' }}>
       <Helmet>
         <script src="https://www.google.com/recaptcha/api.js"></script>
       </Helmet>
-      <div
-        className='p-5 flex flex-col items-center'
-        style={{
-          backgroundImage:`url(${backgroundImage})`,
-          backgroundRepeat:'no-repeat',
-          backgroundSize:'cover',
-          backgroundPosition:'center',
-        }}
-      >
-        <div className='bg-white bg-opacity-70 shadow-lg border border-black rounded-md p-5 w-full md:w-[50%] m-4'>
-          <h1 className='font-bold text-3xl text-center'>Login</h1>
-          <form className='m-2 md:m-5 flex flex-col' id="login-form" onSubmit={handleLogin}>
-            <div className='flex flex-col m-2'>
-              <label htmlFor='email'>Email:</label>
-              <input
-                type='email'
-                name='email'
-                placeholder='Email'
-                value={formData.email}
-                onChange={handleInputChange}
-                id='email'
-                required
-                className='border border-black rounded-md m-2 p-2'
-              />
-              <label htmlFor='password'>Password:</label>
-              <div className='relative'>
-                <input
-                  type='password'
-                  name='password'
-                  placeholder='Password'
-                  value={formData.password}
-                  onChange={handleInputChange}
-                  id='password'
-                  required
-                  className='border border-black rounded-md m-2 p-2 w-[98%]'
-                />
-              </div>
-              <button className='g-recaptcha bg-main_theme text-white font-bold py-2 px-4 rounded-md mt-4' data-sitekey="6LdzteopAAAAAMgve-hYPd24DzNZlEmKkfluSHF5" data-action='login'>
-                Login to MediHub
-              </button>
-            </div>
+      <div className='w-1/2 flex justify-center items-center'>
+        <Lottie options={defaultOptions} height={400} width={400} />
+      </div>
+      <div className='w-1/2 flex flex-col justify-center items-center bg-white  shadow-lg p-8'>
+        <div className='w-full max-w-md'>
+          <h1 className='text-3xl font-bold text-center mb-6'>Welcome back</h1>
+          <h2 className='text-2xl text-center mb-6'>Login your account</h2>
+          <form className='flex flex-col' id="login-form" onSubmit={handleLogin}>
+            <label htmlFor='email' className='mb-2'>Email:</label>
+            <input
+              type='email'
+              name='email'
+              placeholder='Email'
+              value={formData.email}
+              onChange={handleInputChange}
+              id='email'
+              required
+              className='border border-gray-300 rounded-md mb-4 p-2'
+            />
+            <label htmlFor='password' className='mb-2'>Password:</label>
+            <input
+              type='password'
+              name='password'
+              placeholder='Password'
+              value={formData.password}
+              onChange={handleInputChange}
+              id='password'
+              required
+              className='border border-gray-300 rounded-md mb-4 p-2'
+            />
+            <button className='g-recaptcha bg-main_theme text-white font-bold py-2 px-4 rounded-md mb-4' data-sitekey="your-site-key" data-action='login'>
+              Login
+            </button>
           </form>
-          <div className='text-sm md:text-lg md:flex items-center justify-between m-2'>
-            <Link to='/signup'>
-              <p className='p-1 md:p-0'>Don't have an account?</p>
+          <div className='flex justify-between text-sm md:text-lg'>
+            <Link to='/signup' className='text-purple-600 hover:underline' style={{ color: 'rgb(27, 120, 120)' }}>
+              Create Account
             </Link>
-            <Link to='/'>
-              <p className='p-1 md:p-0'>Forgot Password?</p>
+            <Link to='/' className='text-purple-600 hover:underline' style={{ color: 'rgb(27, 120, 120)' }}>
+              Forgot Password?
             </Link>
+
           </div>
         </div>
       </div>
-    </div>  
+    </div>
   );
 }
 
