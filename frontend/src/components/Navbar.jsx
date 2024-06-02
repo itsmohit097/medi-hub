@@ -70,7 +70,7 @@ function Navbar() {
   ];
 
   return (
-    <div className="w-full h-16 bg-light_theme fixed top-0 z-50">
+    <div className="w-full h-16 bg-light_theme top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between md:px-8 px-3 py-1 h-full">
         {/* logo */}
         <div className="flex items-center gap-3">
