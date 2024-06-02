@@ -39,7 +39,7 @@ function TopSpecialities() {
   const navigate = useNavigate();
 
   return (
-    <div className="wd-full  ">
+    <div className="w-full  ">
       <div className="max-w-7xl mx-auto flex flex-col items-center h-full lg:px-6 lg:py-8 lg:justify-center px-0 py-3">
         <h1 className="text-3xl  font-semibold text-theme text-start">
           Top Specialities

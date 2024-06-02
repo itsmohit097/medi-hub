@@ -41,7 +41,7 @@ export {
   AppointmentLocation, Departments, AllDoctors, AboutUs, Login, Signup, ErrorPage,
   WhatIsMedihub, SkeletonLoading, TermsAndConditions, PrivacyPolicy, AddtoCart,
   Categoryitems, SingleMedicine, Medicines, GoToTop, Pagination, MedicineCard,
-  Bot, Testamonial, CartPage
+  Bot, Testamonial, CartPage,TopSpecialities,
 };
 
 
