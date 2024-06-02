@@ -14,6 +14,8 @@ import MedicineCard from "../components/MedicineCard.jsx";
 import Bot from "../components/Bot.jsx";
 import FAQSection from "../components/Faq.jsx";
 import Testamonial from "../components/Testamonial.jsx";
+import OrderedProduct from "../components/CartPage.jsx";
+
 
 // Pages
 import Home from "../pages/Home.jsx";
@@ -29,13 +31,16 @@ import AddtoCart from "../pages/AddtoCart.jsx";
 import Categoryitems from "../pages/Categoryitems.jsx";
 import SingleMedicine from "../pages/SingleMedicine.jsx";
 import Medicines from "../pages/Medicines.jsx";
+import CartPage from "../components/CartPage.jsx";
 
 import axios from "../axios/axios.jsx";
 
-export { 
-  axios, Navbar, Footer, Home, Hero, WhyUs, Contributors, Appointment, FAQSection, 
-  AppointmentLocation, Departments, AllDoctors, AboutUs, Login, Signup, ErrorPage, 
-  WhatIsMedihub, SkeletonLoading, TermsAndConditions, PrivacyPolicy, AddtoCart, 
-  Categoryitems, SingleMedicine, Medicines, GoToTop, Pagination, MedicineCard, 
-  Bot, Testamonial 
+
+export {
+  axios, Navbar, Footer, Home, Hero, WhyUs, Contributors, Appointment, FAQSection,
+  AppointmentLocation, Departments, AllDoctors, AboutUs, Login, Signup, ErrorPage,
+  WhatIsMedihub, SkeletonLoading, TermsAndConditions, PrivacyPolicy, AddtoCart,
+  Categoryitems, SingleMedicine, Medicines, GoToTop, Pagination, MedicineCard,
+  Bot, Testamonial, CartPage
 };
+
