@@ -10,7 +10,7 @@ import {
   Footer,
   Home,
   Appointment,
-  AllDoctors,
+  // AllDoctors,
   AboutUs,
   Login,
   Signup,
@@ -24,6 +24,7 @@ import {
   GoToTop,
   CartPage,
   Bot,
+  SkeletonLoading,
 } from "./import-export/ImportExport.js";
 // import TopSpecialitiesCard from "./components/TopSpecialitiesCard.jsx";
 import SpecialitiesPage from "./pages/SpecialitiesPage.jsx";
@@ -36,7 +37,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/appointment" element={<Appointment />} />
-          <Route path="/alldoctors" element={<AllDoctors />} />
+          <Route path="/alldoctors" element={<SkeletonLoading />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/termsandconditions" element={<TermsAndConditions />} />
           <Route path="/privacypolicy" element={<PrivacyPolicy />} />
