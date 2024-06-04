@@ -10,6 +10,7 @@ Join Our Discord Server https://discord.gg/krQd2Fss
 <br/>
 
 # MediHub - MERN STACK HOSPITAL MANAGEMENT SYSTEM
+
 <p>
 
 Welcome to **MediHub**: Your All-in-One Hospital Management Solution!
@@ -28,9 +29,12 @@ MediHub is an open-source web application designed to revolutionize healthcare m
 
 **Our Mission:**
 
+At this part where the user could use the stuffs related to the project and the project could be explained in a better way.
+
 At MediHub, our mission is clear: to empower healthcare professionals with the tools they need to deliver exceptional patient care. By fostering a collaborative community and providing a user-friendly platform, we aim to promote innovation and drive positive change in the healthcare industry.
 
 Join us on our journey to transform healthcare management. Whether you're a developer, healthcare professional, or simply passionate about improving healthcare services, MediHub welcomes you to be a part of our community!
+this is the mission that we are currently following and the project is based on.
 
 ---
 
@@ -39,7 +43,6 @@ Feel free to customize it further to fit your preferences!
 > Here is an example of a Profile https://projectshut.vercel.app/projects/priyankarpal
 
 </p>
-
 
 ## 💻 Tech Stack
 
@@ -50,24 +53,26 @@ Feel free to customize it further to fit your preferences!
 - [TailwindCSS](https://tailwindcss.com) - Tailwind CSS is a utility-first CSS framework for rapidly building modern websites without ever leaving your HTML.
 - [MongoDB](https://www.mongodb.com/) - MongoDB is an open source NoSQL database management program.
 
-
 ## Folder Structure
 
 The project repository is organized as follows:
 
 - `frontend`: Contains the client-side frontend code built with React.js.
 - `backend`: Contains the server-side backend code built with Node.js.
-- `dashboard`:  Contains the admin dashboard frontend code built with React.js.
+- `dashboard`: Contains the admin dashboard frontend code built with React.js.
 
 ## 🚀 Quick start
 
 #### 1. Fork this repository
 
 #### 2. Clone your forked repository
+
 ```sh
 git clone https://github.com/itsmohit097/medi-hub.git
 ```
+
 #### 3. Change the directory and install dependencies :
+
 ```shell
    cd frontend
    npm install or npm i
@@ -77,14 +82,15 @@ git clone https://github.com/itsmohit097/medi-hub.git
 
    cd dashboard
    npm install or npm i
-``` 
+```
+
 #### 4. Start the development environment:
 
-   ```shell
-   npm run dev // for all
-   now open the local host
-   ```
-   
+```shell
+npm run dev // for all
+now open the local host
+```
+
 ## 🙌 Contributing
 
 > **Warning**: Please do not spam the repository with unnecessary PRs. Make sure to follow the project's [Code of Conduct](https://github.com/itsmohit097/medi-hub/blob/main/CODE_OF_CONDUCT.md).
@@ -92,3 +98,17 @@ git clone https://github.com/itsmohit097/medi-hub.git
 - Go through the [CONTRIBUTING.md](https://github.com/itsmohit097/medi-hub/blob/main/contributing.md) file, where all the guidelines have been mentioned that will guide you to make your contribution.
 - Do check out the [project issue tracker](https://github.com/itsmohit097/medi-hub/issues) section.
 - Do not raise any issues regarding READNE.md file.
+
+## 📝 License
+
+This project follows the [MIT License](
+
+## 📧 Contact
+
+- **Mohit Mahato** - [itsmohit097](
+
+---
+
+this is the basic sample test we gonna undergo
+
+Feel free to customize it further to fit your preferences!
