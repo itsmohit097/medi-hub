@@ -97,3 +97,6 @@ git clone https://github.com/itsmohit097/medi-hub.git
 
 
 This is for sample purpose 
+
+
+this is basic
