@@ -4,10 +4,10 @@ import { NavLink } from "react-router-dom";
 import { FaHospital, FaVideo } from "react-icons/fa";
 import hero from "/new_hero.png";
 import langIcon from "/language.webp";
-import SkeletonLoading from "./SkeltonLoading";
+// import SkeletonLoading from "./SkeltonLoading";
 
 const DoctorsCard = ({ doctor }) => {
-  if (!doctor) return <SkeletonLoading />;
+  // if (!doctor) return <SkeletonLoading />;
   return (
     <>
       <section className="border-2 border-dark_theme rounded-md shadow-lg py-1 px-1">
