@@ -93,3 +93,7 @@ git clone https://github.com/itsmohit097/medi-hub.git
 - Go through the [CONTRIBUTING.md](https://github.com/itsmohit097/medi-hub/blob/main/contributing.md) file, where all the guidelines have been mentioned that will guide you to make your contribution.
 - Do check out the [project issue tracker](https://github.com/itsmohit097/medi-hub/issues) section.
 - Do not raise any issues regarding READNE.md file.
+- 
+
+
+This is for sample purpose 
