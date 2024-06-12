@@ -1,3 +1,5 @@
+import { Testimonials } from './src/import-export/ImportExport';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -26,7 +28,8 @@ export default {
         cart_orange: "#FF8945",
         text: "#ffffff",
         text_grey: "#464646",
-        "medicine-banner": "#162C2A",
+        medicine_banner: "#162C2A",
+        testimonial_img_bg: "#579D93",
       },
       // height:{
       //   heroHeihgt:"calc"

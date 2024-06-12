@@ -1,13 +1,12 @@
-import React from 'react'
-import { AppointmentLocation, Departments } from '../import-export/ImportExport'
+import React from "react";
+import { AppointmentLocation } from "../import-export/ImportExport";
 
 function Appointment() {
-    return (
-        <>
-            <AppointmentLocation />
-            <Departments />
-        </>
-    )
+  return (
+    <>
+      <AppointmentLocation />
+    </>
+  );
 }
 
-export default Appointment
+export default Appointment;
