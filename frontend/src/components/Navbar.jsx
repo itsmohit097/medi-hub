@@ -17,6 +17,7 @@ import {
 import { LuBox } from "react-icons/lu";
 import { IoIosLogOut } from "react-icons/io";
 import { FaRegCircleUser } from "react-icons/fa6";
+import { useCart } from "../Context/cartContext";
 
 function Navbar() {
   // state to manage drop down menu
@@ -24,6 +25,10 @@ function Navbar() {
     useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] =
     useState(false);
+
+  const token = localStorage.getItem("token");
+  console.log(token);
+  const { totalItems } = useCart();
 
   // mouse events
   const handleMouseEnter = () => {
@@ -188,9 +193,13 @@ function Navbar() {
           <NavLink to={"/medicine-cart"}>
             <IoCartOutline className="text-dark_theme size-8 hidden md:block mr-1" />
             <div className="absolute bottom-4 left-4 border border-main_theme rounded-full cursor-pointer z-50 bg-main_theme/90 text-light_theme">
-              <span className="px-2 py-2 text-xs font-medium">
-                7
-              </span>
+              {token && (
+                <div className="absolute bottom-4 left-4 border border-main_theme rounded-full cursor-pointer z-50 bg-main_theme/90 text-light_theme">
+                  <span className="px-2 py-2 text-xs font-medium">
+                    {totalItems}
+                  </span>
+                </div>
+              )}
             </div>
           </NavLink>
 
@@ -273,11 +282,13 @@ function Navbar() {
             <div className="relative">
               <NavLink to="/medicine-cart">
                 <IoCartOutline className="text-dark_theme size-8 mr-1" />
-                <div className="absolute bottom-4 left-4 border border-main_theme rounded-full cursor-pointer z-50 bg-main_theme/90 text-light_theme">
-                  <span className="px-2 py-2 text-xs font-medium">
-                    7
-                  </span>
-                </div>
+                {token && (
+                  <div className="absolute bottom-4 left-4 border border-main_theme rounded-full cursor-pointer z-50 bg-main_theme/90 text-light_theme">
+                    <span className="px-2 py-2 text-xs font-medium">
+                      {totalItems}
+                    </span>
+                  </div>
+                )}
               </NavLink>
             </div>
           </ul>
