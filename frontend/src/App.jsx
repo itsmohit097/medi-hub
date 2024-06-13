@@ -2,103 +2,74 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 import { CartProvider } from "./Context/cartContext";
-
 import AppContext from "./Context/Context.jsx";
-
 import {
   Navbar,
   Footer,
-  Home,
-  Appointment,
-  AllDoctors,
-  AboutUs,
-  Login,
-  Signup,
+  HomePage,
+  AllDoctorsPage,
+  SpecialitiesPage,
+  MedicinesPage,
+  LoginPage,
+  SignupPage,
   ErrorPage,
-  TermsAndConditions,
-  PrivacyPolicy,
+  FaqsPage,
+  AboutUsPage,
+  PrivacyPolicyPage,
+  TermsAndConditionsPage,
+  OrderHistoryPage,
+  // Appointment,
   AddtoCart,
-  Categoryitems,
-  SingleMedicine,
-  Medicines,
-  GoToTop,
-  CartPage,
+  ProductsByCategory,
+  // SingleMedicine,
+  // GoToTop,
   Bot,
 } from "./import-export/ImportExport.js";
-// import TopSpecialitiesCard from "./components/TopSpecialitiesCard.jsx";
-import SpecialitiesPage from "./pages/SpecialitiesPage.jsx";
 
 function App() {
   return (
     <BrowserRouter>
       <AppContext>
         <CartProvider>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route
-              path="/appointment"
-              element={<Appointment />}
-            />
-            <Route
-              path="/alldoctors"
-              element={<AllDoctors />}
-            />
-            <Route
-              path="/aboutus"
-              element={<AboutUs />}
-            />
-            <Route
-              path="/termsandconditions"
-              element={<TermsAndConditions />}
-            />
-            <Route
-              path="/privacypolicy"
-              element={<PrivacyPolicy />}
-            />
-            <Route
-              path="/medicines"
-              element={<Medicines />}
-            />
-            <Route
-              path="/buy-medicines/:id"
-              element={<SingleMedicine />}
-            />
-            <Route
-              path="/shop-by-category/:id"
-              element={<Categoryitems />}
-            />
-            <Route
-              path="/medicine-cart"
-              element={<AddtoCart />}
-            />
-            <Route
-              path="/login"
-              element={<Login />}
-            />
-            <Route
-              path="/signup"
-              element={<Signup />}
-            />
-            <Route
-              path="/specialities"
-              element={<SpecialitiesPage />}
-            />
-            <Route
-              path="/cart"
-              element={<CartPage />}
-            />
-            <Route
-              path="/*"
-              element={<ErrorPage />}
-            />
-          </Routes>
-          <Bot />
-          <GoToTop />
-          <Footer />
-          <ToastContainer position="top-center" />
-        </CartProvider>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/alldoctors" element={<AllDoctorsPage />} />
+          {/* <Route path="/appointment" element={<Appointment />} /> */}
+
+          <Route path="/specialities" element={<SpecialitiesPage />} />
+
+          <Route path="/medicines" element={<MedicinesPage />} />
+          <Route
+            path="/medicines/shop_by_category/:id"
+            element={<ProductsByCategory />}
+          />
+          {/* <Route path="/buy-medicines/:id" element={<SingleMedicine />} /> */}
+          <Route path="/medicines/cart" element={<AddtoCart />} />
+          <Route
+            path="/medicines/order_history"
+            element={<OrderHistoryPage />}
+          />
+
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} />
+
+          <Route path="/*" element={<ErrorPage />} />
+          <Route path="/faqs" element={<FaqsPage />} />
+          <Route path="/aboutus" element={<AboutUsPage />} />
+          <Route path="/privacypolicy" element={<PrivacyPolicyPage />} />
+          <Route
+            path="/termsandconditions"
+            element={<TermsAndConditionsPage />}
+          />
+        </Routes>
+        <Bot />
+        {/* <GoToTop /> */}
+        <Footer />
+        <ToastContainer position="top-right" />
+          </CartProvider>
       </AppContext>
     </BrowserRouter>
   );
