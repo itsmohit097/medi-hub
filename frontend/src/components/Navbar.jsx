@@ -11,17 +11,27 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
-import { FaRegCalendarCheck, FaRegHeart } from "react-icons/fa";
+import {
+  FaRegCalendarCheck,
+  FaRegHeart,
+} from "react-icons/fa";
 import { LuBox } from "react-icons/lu";
 import { IoIosLogOut } from "react-icons/io";
 import { FaRegCircleUser } from "react-icons/fa6";
+import { useCart } from "../Context/cartContext";
+
 import { Context } from "../Context/Context";
 
 function Navbar() {
   const { isAuthe } = useContext(Context);
   const [show, setShow] = useState(false);
+   const token = localStorage.getItem("token");
+  console.log(token);
+  const { totalItems } = useCart();
+
   const handleLogIn = async () => {
     console.log("working");
+
   };
   const handleLogOut = async () => {
     console.log("working");
@@ -36,14 +46,19 @@ function Navbar() {
   // Nav items
   const navItems = [
     { to: "/alldoctors", label: "All Doctors" },
-    { to: "/specialities", label: "Specialities" },
+    {
+      to: "/specialities",
+      label: "Specialities",
+    },
     { to: "/medicines", label: "Medicines" },
     { to: "/appointment", label: "Appointment" },
   ];
 
   const navLinkClass = ({ isActive }) =>
     `text-sm font-semibold relative cursor-pointer before:block before:absolute before:bottom-[-4px] before:left-0 before:w-0 before:h-0.5 before:rounded-full before:bg-text before:transition-all before:delay-150 before:ease-in-out hover:before:w-full hover:text-dark_theme ${
-      isActive ? "text-dark_theme" : "text-main_theme"
+      isActive
+        ? "text-dark_theme"
+        : "text-main_theme"
     } `;
 
   // mobile menu toggle
@@ -84,7 +99,11 @@ function Navbar() {
       label: "linkedin",
       icon: FaLinkedinIn,
     },
-    { to: "https://discord.gg/krQd2Fss", label: "discord", icon: FaDiscord },
+    {
+      to: "https://discord.gg/krQd2Fss",
+      label: "discord",
+      icon: FaDiscord,
+    },
   ];
 
   return (
@@ -97,12 +116,15 @@ function Navbar() {
           </h1>
         </NavLink>
 
+
         {/* Nav Menus */}
         <div className="hidden lg:flex items-center justify-between gap-8">
           <ul className="flex gap-8 items-center">
             {navItems.map((navItem, index) => (
               <li key={index}>
-                <NavLink to={navItem.to} className={navLinkClass}>
+                <NavLink
+                  to={navItem.to}
+                  className={navLinkClass}>
                   {navItem.label}
                 </NavLink>
               </li>
@@ -110,23 +132,24 @@ function Navbar() {
             <li
               className="relative hover:scale-105"
               onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
+              onMouseLeave={handleMouseLeave}>
               <NavLink
                 to="/login"
                 className="text-md font-semibold relative cursor-pointer rounded flex items-center border border-dark_theme text-dark_theme px-4 py-2 gap-2 max-w-[150px]"
                 onClick={handleLogIn}
               >
+
                 <FaRegCircleUser className="text-dark_theme" />
-                <span className="truncate">Login</span>
+                <span className="truncate">
+                  Login
+                </span>
               </NavLink>
 
               {/* Dropdown Menus */}
               {isDropdownOpen && (
                 <div
                   className="absolute left-0 mt-0 w-56 bg-light_theme border border-dark_theme rounded shadow-lg z-50"
-                  onMouseEnter={handleMouseEnter}
-                >
+                  onMouseEnter={handleMouseEnter}>
                   {/* Drop down menu items */}
                   {dropdownMenus.map((menu, index) => (
                     <NavLink
@@ -140,11 +163,13 @@ function Navbar() {
                       {menu.label}
                     </NavLink>
                   ))}
+
                 </div>
               )}
             </li>
           </ul>
         </div>
+
 
         {/* Mobile Menu Toggle button */}
         <div className="lg:hidden inline-flex">
@@ -156,6 +181,7 @@ function Navbar() {
               />
             ) : (
               <FaBars size={26} />
+
             )}
           </button>
         </div>
@@ -169,15 +195,26 @@ function Navbar() {
           >
             <IoCartOutline className="text-dark_theme size-8 hidden md:block mr-1" />
             <div className="absolute bottom-4 left-4 border border-main_theme rounded-full cursor-pointer z-50 bg-main_theme/90 text-light_theme">
-              <span className="px-2 py-2 text-xs font-medium">7</span>
+              {token && (
+                <div className="absolute bottom-4 left-4 border border-main_theme rounded-full cursor-pointer z-50 bg-main_theme/90 text-light_theme">
+                  <span className="px-2 py-2 text-xs font-medium">
+                    {totalItems}
+                  </span>
+                </div>
+              )}
             </div>
           </div>
 
-          {socialLinks.map((socialLink, index) => (
-            <NavLink key={index} to={socialLink.to} target="_blank">
-              <socialLink.icon className="text-dark_theme/90 size-5 hidden md:block hover:scale-110" />
-            </NavLink>
-          ))}
+          {socialLinks.map(
+            (socialLink, index) => (
+              <NavLink
+                key={index}
+                to={socialLink.to}
+                target="_blank">
+                <socialLink.icon className="text-dark_theme/90 size-5 hidden md:block hover:scale-110" />
+              </NavLink>
+            )
+          )}
         </div>
       </div>
 
@@ -215,46 +252,55 @@ function Navbar() {
                 {isDropdownOpen && (
                   <div className="w-full bg-light_theme border border-dark_theme rounded shadow-lg z-50 mt-2">
                     {dropdownMenus.map((menu, index) => (
+
                       <NavLink
                         key={index}
                         to={menu.to}
                         className="flex items-center px-4 py-3 gap-2 text-sm font-medium text-dark_theme hover:bg-main_theme/10"
+
                         onClick={toggleMobileMenu}
-                      >
+
                         {menu.icon && (
                           <menu.icon className="text-dark_theme size-4" />
                         )}{" "}
                         {menu.label}
                       </NavLink>
-                    ))}
-                  </div>
-                )}
-              </li>
 
-              {/* Social Icons (mobile) */}
-              <div className="flex gap-3 items-center justify-center">
-                {socialLinks.map((socialLink, index) => (
-                  <NavLink key={index} to={socialLink.to} target="_blank">
+                    )
+                  )}
+                </div>
+              )}
+            </li>
+
+            {/* Social Icons (mobile) */}
+            <div className="flex gap-3 items-center justify-center mb-4">
+              {socialLinks.map(
+                (socialLink, index) => (
+                  <NavLink
+                    key={index}
+                    to={socialLink.to}
+                    target="_blank">
                     <socialLink.icon className="text-dark_theme/90 size-5 hover:scale-110" />
                   </NavLink>
-                ))}
-              </div>
+                )
+              )}
+            </div>
 
-              {/* Cart (mobile) */}
-              <div className="hidden relative">
-                <div
-                  className="cursor-pointer"
-                  role="button"
-                  onClick={handleNavigation}
-                >
-                  <IoCartOutline className="text-dark_theme size-8 mr-1" />
+            {/* Cart (mobile) */}
+            <div className="relative">
+              <NavLink to="/medicine-cart">
+                <IoCartOutline className="text-dark_theme size-8 mr-1" />
+                {token && (
                   <div className="absolute bottom-4 left-4 border border-main_theme rounded-full cursor-pointer z-50 bg-main_theme/90 text-light_theme">
-                    <span className="px-2 py-2 text-xs font-medium">7</span>
+                    <span className="px-2 py-2 text-xs font-medium">
+                      {totalItems}
+                    </span>
                   </div>
-                </div>
-              </div>
-            </ul>
-          </div>
+                )}
+              </NavLink>
+            </div>
+          </ul>
+
         </div>
       )}
     </div>

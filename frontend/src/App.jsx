@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+import { CartProvider } from "./Context/cartContext";
 import AppContext from "./Context/Context.jsx";
 import {
   Navbar,
@@ -30,6 +32,7 @@ function App() {
   return (
     <BrowserRouter>
       <AppContext>
+        <CartProvider>
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -66,6 +69,7 @@ function App() {
         {/* <GoToTop /> */}
         <Footer />
         <ToastContainer position="top-right" />
+          </CartProvider>
       </AppContext>
     </BrowserRouter>
   );
