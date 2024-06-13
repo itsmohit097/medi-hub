@@ -73,18 +73,27 @@ function Footer() {
             {/* icons */}
             <div className="flex items-center gap-4 mt-10">
               <div className=" border border-white/70 rounded-full px-2 py-2 hover:bg-slate-700/30 cursor-pointer">
-                <a href="https://www.linkedin.com/in/itsmohit097/" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/itsmohit097/"
+                  target="_blank"
+                >
                   <FaInstagram />
                 </a>
               </div>
               <div className=" border border-white/70 rounded-full px-2 py-2 hover:bg-slate-700/30 cursor-pointer">
-                <a href="https://www.linkedin.com/in/itsmohit097/" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/itsmohit097/"
+                  target="_blank"
+                >
                   <FaLinkedin />
                 </a>
               </div>
               <div className=" border border-white/70 rounded-full px-2 py-2 hover:hover:bg-slate-700/30 cursor-pointer">
-                <a href="https://www.linkedin.com/in/itsmohit097/" target="_blank">
-                <FaXTwitter />
+                <a
+                  href="https://www.linkedin.com/in/itsmohit097/"
+                  target="_blank"
+                >
+                  <FaXTwitter />
                 </a>
               </div>
             </div>
@@ -108,12 +117,20 @@ function Footer() {
             </ul>
           </div>
           {/* Contact US */}
-          <form onSubmit={handleMessage} className="cols-span-1 md:col-span-5 grid gap-y-5">
+          {/* <form
+            onSubmit={handleMessage}
+            className="cols-span-1 md:col-span-5 grid gap-y-5"
+          >
             <h1 className="text-left text-xl font-bold text-black/80">
               Contact Us
             </h1>
             <div className="relative flex justify-left space-y-7">
-              <label htmlFor="email" className="text-md font-normal absolute top-0 left-0">Email</label>
+              <label
+                htmlFor="email"
+                className="text-md font-normal absolute top-0 left-0"
+              >
+                Email
+              </label>
               <input
                 type="text"
                 placeholder="Enter you email address"
@@ -123,7 +140,12 @@ function Footer() {
               />
             </div>
             <div className="relative flex justify-left space-y-7">
-              <label htmlFor="message" className="text-md font-normal absolute top-0 left-0">Message</label>
+              <label
+                htmlFor="message"
+                className="text-md font-normal absolute top-0 left-0"
+              >
+                Message
+              </label>
               <textarea
                 rows={7}
                 placeholder="Write Your Message Here"
@@ -132,8 +154,13 @@ function Footer() {
                 className="px-3 py-3 rounded-md grow"
               />
             </div>
-            <button type="submit" className="grow bg-main_theme text-white py-3 rounded-md">Send Message</button>
-          </form>
+            <button
+              type="submit"
+              className="grow bg-main_theme text-white py-3 rounded-md"
+            >
+              Send Message
+            </button>
+          </form> */}
         </div>
 
         {/* footer bottom */}
